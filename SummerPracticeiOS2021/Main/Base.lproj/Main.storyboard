@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YTH-Kf-sCU">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Rustem-->
+        <scene sceneID="dHh-09-r7g">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Rustem" id="Ymr-BZ-o3q" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Rustem" id="MZF-mW-rQn"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fDu-7a-JOG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="613" y="-96"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="iXL-4B-6m0">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="YTH-Kf-sCU" customClass="TabBarController" customModule="SummerPracticeiOS2021" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="522-bu-OXJ">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="AsD-1F-cs3" kind="relationship" relationship="viewControllers" id="bnc-Ok-lkq"/>
+                        <segue destination="Ymr-BZ-o3q" kind="relationship" relationship="viewControllers" id="03g-FH-KIO"/>
+                        <segue destination="wZj-Zu-l4H" kind="relationship" relationship="viewControllers" id="acX-TK-2Sa"/>
+                        <segue destination="Do3-oF-Kx3" kind="relationship" relationship="viewControllers" id="8Ab-Lm-1bp"/>
+                        <segue destination="tf7-2x-n7C" kind="relationship" relationship="viewControllers" id="hdj-2S-0bf"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M7S-p4-dpJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
+        </scene>
+        <!--Andrey-->
+        <scene sceneID="dEK-LW-puk">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Andrey" id="AsD-1F-cs3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Andrey" id="weH-el-iv6"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mRt-Wp-zq2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="606" y="-31"/>
+        </scene>
+        <!--Alina-->
+        <scene sceneID="n7D-AK-owu">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Alina" id="wZj-Zu-l4H" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Alina" id="LjN-MH-5Mb"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lvv-A8-1wG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="595" y="74"/>
+        </scene>
+        <!--Alsu-->
+        <scene sceneID="zle-z4-Pcj">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Alsu" id="Do3-oF-Kx3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Alsu" id="FOL-7H-MzY"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FqV-e9-VHV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="595" y="167"/>
+        </scene>
+        <!--Lilya-->
+        <scene sceneID="aRZ-G9-6Nx">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Lilya" id="tf7-2x-n7C" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Lilya" id="QJn-EE-k6K"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y6G-Z2-chN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="593" y="265"/>
+        </scene>
+    </scenes>
+</document>
