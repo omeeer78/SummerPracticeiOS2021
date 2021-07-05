@@ -7,15 +7,25 @@
 
 import UIKit
 
-class AndreyViewController: UIViewController {
+class ChecklistViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    let data = Database().users[0].checklist
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        tableView.delegate = self
+        tableView.dataSource = self
     }
     
-
+    
+    @IBAction func changeChecklistPage(_ sender: UISegmentedControl) {
+        
+    }
+    
+    
+    
     /*
     // MARK: - Navigation
 
@@ -25,5 +35,33 @@ class AndreyViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+}
 
+extension ChecklistViewController:UITableViewDelegate{
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        guard let filmViewController = storyboard?.instantiateViewController(identifier: "FilmViewController")as? FilmViewController else {
+            return
+        }
+        filmViewController.film = data[indexPath.row].film
+        present(filmViewController, animated: true)
+    }
+    
+    
+}
+
+extension ChecklistViewController:UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        data.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CheckListViewCell", for: indexPath) as? CheckListViewCell else {
+            return UITableViewCell()
+        }
+        cell.setData(data[indexPath.row])
+        return cell
+    }
 }

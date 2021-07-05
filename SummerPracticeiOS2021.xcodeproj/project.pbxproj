@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		23CBC61B26934835003DACDF /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CBC61A26934835003DACDF /* Film.swift */; };
 		23CBC61E269349CF003DACDF /* ChecklistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CBC61D269349CF003DACDF /* ChecklistCell.swift */; };
 		23CBC62126934B62003DACDF /* CheckListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CBC62026934B62003DACDF /* CheckListViewCell.swift */; };
 		23CBC6242693503A003DACDF /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CBC6232693503A003DACDF /* Database.swift */; };
@@ -32,7 +31,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		23CBC61A26934835003DACDF /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
 		23CBC61D269349CF003DACDF /* ChecklistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistCell.swift; sourceTree = "<group>"; };
 		23CBC62026934B62003DACDF /* CheckListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListViewCell.swift; sourceTree = "<group>"; };
 		23CBC6232693503A003DACDF /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
@@ -72,7 +70,6 @@
 		23CBC61826933934003DACDF /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				23CBC61A26934835003DACDF /* Film.swift */,
 				23CBC61D269349CF003DACDF /* ChecklistCell.swift */,
 				23CBC6232693503A003DACDF /* Database.swift */,
 				23CBC626269352F1003DACDF /* User.swift */,
@@ -266,7 +263,6 @@
 				D10F003A2690DC86004999B5 /* RustemViewController.swift in Sources */,
 				23CBC62B26935DDA003DACDF /* FilmViewController.swift in Sources */,
 				D10F00422690DC97004999B5 /* LilyaViewController.swift in Sources */,
-				23CBC61B26934835003DACDF /* Film.swift in Sources */,
 				D10F00152690D729004999B5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
