@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23CBC61B26934835003DACDF /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CBC61A26934835003DACDF /* Film.swift */; };
+		23CBC61E269349CF003DACDF /* ChecklistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CBC61D269349CF003DACDF /* ChecklistCell.swift */; };
+		23CBC62126934B62003DACDF /* CheckListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CBC62026934B62003DACDF /* CheckListViewCell.swift */; };
+		23CBC6242693503A003DACDF /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CBC6232693503A003DACDF /* Database.swift */; };
+		23CBC627269352F1003DACDF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CBC626269352F1003DACDF /* User.swift */; };
+		23CBC62B26935DDA003DACDF /* FilmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CBC62A26935DDA003DACDF /* FilmViewController.swift */; };
 		D10F00132690D729004999B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10F00122690D729004999B5 /* AppDelegate.swift */; };
 		D10F00152690D729004999B5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10F00142690D729004999B5 /* SceneDelegate.swift */; };
 		D10F00172690D729004999B5 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10F00162690D729004999B5 /* TabBarController.swift */; };
@@ -26,6 +32,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		23CBC61A26934835003DACDF /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
+		23CBC61D269349CF003DACDF /* ChecklistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistCell.swift; sourceTree = "<group>"; };
+		23CBC62026934B62003DACDF /* CheckListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListViewCell.swift; sourceTree = "<group>"; };
+		23CBC6232693503A003DACDF /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		23CBC626269352F1003DACDF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		23CBC62A26935DDA003DACDF /* FilmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmViewController.swift; sourceTree = "<group>"; };
 		D10F000F2690D729004999B5 /* SummerPracticeiOS2021.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SummerPracticeiOS2021.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D10F00122690D729004999B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D10F00142690D729004999B5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +69,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23CBC61826933934003DACDF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				23CBC61A26934835003DACDF /* Film.swift */,
+				23CBC61D269349CF003DACDF /* ChecklistCell.swift */,
+				23CBC6232693503A003DACDF /* Database.swift */,
+				23CBC626269352F1003DACDF /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		D10F00062690D729004999B5 = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +99,7 @@
 		D10F00112690D729004999B5 /* SummerPracticeiOS2021 */ = {
 			isa = PBXGroup;
 			children = (
+				23CBC61826933934003DACDF /* Model */,
 				D10F002A2690D82D004999B5 /* Rustem */,
 				D10F00292690D81E004999B5 /* Andrey */,
 				D10F00282690D814004999B5 /* Alina */,
@@ -122,6 +146,8 @@
 			children = (
 				D10F002D2690D846004999B5 /* Andrey.storyboard */,
 				D10F003B2690DC8A004999B5 /* AndreyViewController.swift */,
+				23CBC62026934B62003DACDF /* CheckListViewCell.swift */,
+				23CBC62A26935DDA003DACDF /* FilmViewController.swift */,
 			);
 			path = Andrey;
 			sourceTree = "<group>";
@@ -228,13 +254,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23CBC627269352F1003DACDF /* User.swift in Sources */,
+				23CBC62126934B62003DACDF /* CheckListViewCell.swift in Sources */,
 				D10F003E2690DC8E004999B5 /* AlinaViewController.swift in Sources */,
 				D10F003C2690DC8A004999B5 /* AndreyViewController.swift in Sources */,
+				23CBC61E269349CF003DACDF /* ChecklistCell.swift in Sources */,
 				D10F00172690D729004999B5 /* TabBarController.swift in Sources */,
 				D10F00132690D729004999B5 /* AppDelegate.swift in Sources */,
+				23CBC6242693503A003DACDF /* Database.swift in Sources */,
 				D10F00402690DC92004999B5 /* AlsuViewController.swift in Sources */,
 				D10F003A2690DC86004999B5 /* RustemViewController.swift in Sources */,
+				23CBC62B26935DDA003DACDF /* FilmViewController.swift in Sources */,
 				D10F00422690DC97004999B5 /* LilyaViewController.swift in Sources */,
+				23CBC61B26934835003DACDF /* Film.swift in Sources */,
 				D10F00152690D729004999B5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,6 +416,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SummerPracticeiOS2021/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -402,6 +435,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SummerPracticeiOS2021/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
