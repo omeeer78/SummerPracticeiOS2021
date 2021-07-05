@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46C2150A26933FB6007AE61D /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C2150926933FB6007AE61D /* EditViewController.swift */; };
 		D10F00132690D729004999B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10F00122690D729004999B5 /* AppDelegate.swift */; };
 		D10F00152690D729004999B5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10F00142690D729004999B5 /* SceneDelegate.swift */; };
 		D10F00172690D729004999B5 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10F00162690D729004999B5 /* TabBarController.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		46C2150926933FB6007AE61D /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		D10F000F2690D729004999B5 /* SummerPracticeiOS2021.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SummerPracticeiOS2021.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D10F00122690D729004999B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D10F00142690D729004999B5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 			children = (
 				D10F002B2690D83C004999B5 /* Rustem.storyboard */,
 				D10F00392690DC86004999B5 /* RustemViewController.swift */,
+				46C2150926933FB6007AE61D /* EditViewController.swift */,
 			);
 			path = Rustem;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 				D10F003A2690DC86004999B5 /* RustemViewController.swift in Sources */,
 				D10F00422690DC97004999B5 /* LilyaViewController.swift in Sources */,
 				D10F00152690D729004999B5 /* SceneDelegate.swift in Sources */,
+				46C2150A26933FB6007AE61D /* EditViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
