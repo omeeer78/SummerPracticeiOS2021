@@ -2,14 +2,14 @@
 import UIKit
 
 struct ChecklistCell {
-let film: Film
-let addingDate: Date
-let status: Status
+    let film: Film
+    let addingDate: Date
+    let status: Status
 }
 
 
 enum Status: Int {
-case wantToWatch = 0
-case watching = 1
-case completed = 2
+    case wantToWatch = 0
+    case watching = 1
+    case completed = 2
 }

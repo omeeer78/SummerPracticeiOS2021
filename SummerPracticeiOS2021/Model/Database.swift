@@ -8,9 +8,8 @@
 import UIKit
 
 struct Database {
-
+    
     var users:[User] = []
     
     var films:[Film] = []
-    
 }
