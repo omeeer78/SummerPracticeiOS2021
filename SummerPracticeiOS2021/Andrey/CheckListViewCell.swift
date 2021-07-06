@@ -29,7 +29,7 @@ class CheckListViewCell: UITableViewCell {
     func setData(_ checklistCell: ChecklistCell) {
         title.text = checklistCell.film.title
         director.text = checklistCell.film.director
-        genre.text = checklistCell.film.title
+        genre.text = checklistCell.film.genre.rawValue
         addingDate.text = DateFormatter().string(from:checklistCell.addingDate)
     }
     

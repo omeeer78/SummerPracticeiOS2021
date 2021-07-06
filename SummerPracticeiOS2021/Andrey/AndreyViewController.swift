@@ -7,61 +7,65 @@
 
 import UIKit
 
-class ChecklistViewController: UIViewController {
-
+class AndreyViewController: UIViewController {
+    
     @IBOutlet weak var tableView: UITableView!
-    let data = Database().users[0].checklist
+    let dataBase = Database()
+    var checklistData:[ChecklistCell] = data.users[0].checklist
+    var currentStatus = 0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.delegate = self
         tableView.dataSource = self
     }
     
     
     @IBAction func changeChecklistPage(_ sender: UISegmentedControl) {
-        
+        openChecklistPage(sender.selectedSegmentIndex)
+    }
+    
+    
+    func openChecklistPage(_ page: Int){
+        currentStatus = page
+        tableView.reloadData()
     }
     
     
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 }
 
-extension ChecklistViewController:UITableViewDelegate{
+extension AndreyViewController:UITableViewDelegate{
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        80
+    }
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        guard let filmViewController = storyboard?.instantiateViewController(identifier: "FilmViewController")as? FilmViewController else {
-            return
-        }
-        filmViewController.film = data[indexPath.row].film
-        present(filmViewController, animated: true)
+        let filmStoryboard = UIStoryboard(name: "Film",bundle: nil)
+        
+        guard let filmViewController = filmStoryboard.instantiateViewController(identifier: "FilmViewController")as? FilmViewController else {return}
+        filmViewController.film = checklistData[indexPath.row].film
+        present(filmViewController, animated: true, completion: nil)
     }
-    
     
 }
 
-extension ChecklistViewController:UITableViewDataSource{
+extension AndreyViewController:UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        data.count
+        checklistData.filter{ $0.status.rawValue == currentStatus }.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CheckListViewCell", for: indexPath) as? CheckListViewCell else {
             return UITableViewCell()
         }
-        cell.setData(data[indexPath.row])
+        cell.setData(checklistData[indexPath.row])
         return cell
     }
 }

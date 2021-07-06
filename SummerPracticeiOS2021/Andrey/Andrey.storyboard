@@ -8,70 +8,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Film View Controller-->
-        <scene sceneID="SYa-uD-8OH">
-            <objects>
-                <viewController id="XAz-bX-YNT" customClass="FilmViewController" customModule="SummerPracticeiOS2021" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="d99-ex-nm3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owj-lZ-odr">
-                                <rect key="frame" x="129" y="301" width="156" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0G6-3V-lk6">
-                                <rect key="frame" x="0.0" y="44" width="414" height="249"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Wq-Oj-dty">
-                                <rect key="frame" x="20" y="399" width="374" height="148"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="14f-uZ-NS0">
-                                <rect key="frame" x="20" y="352" width="104" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FLo-aV-Ggi">
-                                <rect key="frame" x="129" y="352" width="265" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hij-UR-5dB">
-                                <rect key="frame" x="155" y="555" width="104" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Deq-dR-rtd"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <connections>
-                        <outlet property="annotation" destination="6Wq-Oj-dty" id="NPx-kn-kYI"/>
-                        <outlet property="director" destination="Hij-UR-5dB" id="j1m-SJ-8B2"/>
-                        <outlet property="genre" destination="FLo-aV-Ggi" id="FTO-xL-xBo"/>
-                        <outlet property="image" destination="0G6-3V-lk6" id="HGh-a5-9Xg"/>
-                        <outlet property="rating" destination="14f-uZ-NS0" id="TiP-Ss-9J7"/>
-                        <outlet property="title" destination="owj-lZ-odr" id="nlM-gA-izD"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="K8P-cs-YIv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-910.14492753623199" y="140.625"/>
-        </scene>
         <!--Andrey-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
@@ -120,6 +56,12 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="addingDate" destination="nIe-6u-M3O" id="dZJ-Qs-mvv"/>
+                                            <outlet property="director" destination="5Bm-f1-nCt" id="0n9-nH-ata"/>
+                                            <outlet property="genre" destination="giP-0F-9cf" id="58A-wb-XFk"/>
+                                            <outlet property="title" destination="RKd-Yw-v8y" id="ceQ-dK-hgN"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -143,11 +85,20 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="OhJ-Rv-PZf" id="irx-3K-Yfs"/>
+                        <segue destination="tEC-Og-DPr" kind="presentation" identifier="showFilm" id="2Py-oY-mxV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-59.420289855072468" y="137.94642857142856"/>
+            <point key="canvasLocation" x="-462" y="130"/>
+        </scene>
+        <!--Film-->
+        <scene sceneID="WPv-HZ-6zA">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Film" id="tEC-Og-DPr" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UkV-Et-l62" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="273" y="90"/>
         </scene>
     </scenes>
     <resources>
