@@ -9,13 +9,31 @@ import UIKit
 
 class FriendPageViewController: UIViewController {
 
+    @IBOutlet weak var avaImage: UIImageView!
+    @IBOutlet weak var nickname: UILabel!
+    @IBOutlet weak var favGenre: UILabel!
+    
+    @IBOutlet weak var watchedLabel: UILabel!
+    @IBOutlet weak var watchingLabel: UILabel!
+    @IBOutlet weak var wantwatchLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func substractionFunctionButtonPressed(sender: UIButton) {
+        watchedLabel.text = "32"
+    }
+    
+    @IBAction func watchingButtonFunction(_ sender: Any) {
+        watchedLabel.text = "100"
+    }
+    
+    @IBAction func wantToWatchButtonFuction(_ sender: Any) {
+        wantwatchLabel.text = "45"
+    }
     /*
     // MARK: - Navigation
 

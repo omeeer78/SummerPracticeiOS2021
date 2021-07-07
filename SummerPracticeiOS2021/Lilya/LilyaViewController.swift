@@ -11,30 +11,30 @@ import UIKit
 class LilyaViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-
+    
     
     let Data: [FriendsCellData] = [FriendsCellData(name: "ass",
                                                    image: UIImage(systemName: "face.dashed.fill") ?? UIImage()),
+                                   FriendsCellData(name: "as",
+                                                   image: UIImage(systemName: "face.dashed.fill") ?? UIImage()),
+                                   FriendsCellData(name: "a",
+                                                   image: UIImage(systemName: "face.dashed.fill") ?? UIImage()),
+                                   FriendsCellData(name: "u",
+                                                   image: UIImage(systemName: "face.dashed.fill") ?? UIImage()),
+                                   FriendsCellData(name: "usa",
+                                                   image: UIImage(systemName: "face.dashed.fill") ?? UIImage()),
                                    FriendsCellData(name: "ass",
-                                                    image: UIImage(systemName: "face.dashed.fill") ?? UIImage()),
+                                                   image: UIImage(systemName: "face.dashed.fill") ?? UIImage()),
                                    FriendsCellData(name: "ass",
-                                                    image: UIImage(systemName: "face.dashed.fill") ?? UIImage()),
+                                                   image: UIImage(systemName: "face.dashed.fill") ?? UIImage()),
                                    FriendsCellData(name: "ass",
-                                                    image: UIImage(systemName: "face.dashed.fill") ?? UIImage()),
+                                                   image: UIImage(systemName: "face.dashed.fill") ?? UIImage()),
                                    FriendsCellData(name: "ass",
-                                                    image: UIImage(systemName: "face.dashed.fill") ?? UIImage()),
+                                                   image: UIImage(systemName: "face.dashed.fill") ?? UIImage()),
                                    FriendsCellData(name: "ass",
-                                                    image: UIImage(systemName: "face.dashed.fill") ?? UIImage()),
-                                   FriendsCellData(name: "ass",
-                                                    image: UIImage(systemName: "face.dashed.fill") ?? UIImage()),
-                                   FriendsCellData(name: "ass",
-                                                    image: UIImage(systemName: "face.dashed.fill") ?? UIImage()),
-                                   FriendsCellData(name: "ass",
-                                                    image: UIImage(systemName: "face.dashed.fill") ?? UIImage()),
-                                   FriendsCellData(name: "ass",
-                                                    image: UIImage(systemName: "face.dashed.fill") ?? UIImage())]
-
-
+                                                   image: UIImage(systemName: "face.dashed.fill") ?? UIImage())]
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -43,11 +43,11 @@ class LilyaViewController: UIViewController {
 }
 
 struct FriendsCellData {
-      var name: String
-      var image: UIImage
-      //var favoriteGenre: Genre
-      //var friends: [User]
-      //var checklist: [ChecklistCell]
+    var name: String
+    var image: UIImage
+    //var favoriteGenre: Genre
+    //var friends: [User]
+    //var checklist: [ChecklistCell]
 }
 
 extension LilyaViewController: UITableViewDelegate{
@@ -56,20 +56,23 @@ extension LilyaViewController: UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        navigationController?.pushViewController(FriendPageViewController(), animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
+        guard let friendPageViewController = storyboard?.instantiateViewController(identifier: "FriendPageViewController") as? FriendPageViewController else { return }
+        navigationController?.pushViewController(friendPageViewController, animated: true)
     }
+    
+    
 }
 
 extension LilyaViewController: UITableViewDataSource{
-   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         Data.count
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        tableView.deselectRow(at: indexPath, animated: true)
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "BigFriendsTableViewCell", for: indexPath) as? BigFriendsTableViewCell else { return UITableViewCell() }
         cell.SetData(friend: Data[indexPath.row])
         return cell
         
-}
+    }
 }
