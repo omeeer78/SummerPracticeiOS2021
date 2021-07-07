@@ -16,6 +16,10 @@ class AlinaViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let test = Database()
+        actions.append(Action(user: test.users[0], friend: test.users[2], recommendedFilm: test.films[3]))
+        actions.append(Action(user: test.users[0], friend: test.users[3], recommendedFilm: test.films[7]))
+        actions.append(Action(user: test.users[0], friend: test.users[4], recommendedFilm: test.films[0]))
         newsUITableView.dataSource = self
         newsUITableView.delegate = self
     }
@@ -38,16 +42,16 @@ extension AlinaViewController: UITableViewDataSource {
 
 extension AlinaViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        405
+        362
     }
     
 //заменить AlinaViewController на экран фильма, это модальный переход на него
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        tableView.deselectRow(at: indexPath, animated: true)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
 //        guard let alinaViewController = storyboard?.instantiateViewController(withIdentifier: "AlinaViewController") as? AlinaViewController else { return }
 //    alinaViewController.film = фсешщты[indexPath.row].film
 //    present(alinaViewController, animated: true)
-//    }
+    }
 }
 
 
