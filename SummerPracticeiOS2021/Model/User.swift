@@ -15,4 +15,6 @@ struct User {
     var password: String
     var friends: [User]
     var checklist: [ChecklistCell]
+    
+    
 }
