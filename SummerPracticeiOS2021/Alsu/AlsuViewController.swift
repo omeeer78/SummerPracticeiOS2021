@@ -7,23 +7,20 @@
 
 import UIKit
 
-class AlsuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class AlsuViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
-
     
-    var data:[Film] = [Film(title: "A Quiet Place Part II", director: "John Krasinski", annotation: "Following the events at home, the Abbott family now face the terrors of the outside world. Forced to venture into the unknown, they realize the creatures that hunt by sound are not the only threats lurking beyond the sand path.", image: UIImage(named: "quietplace2_324211") ?? UIImage(), rating: 7.5, genre: Genre.horror),
-                       Film(title: "The Tomorrow War", director: "Chris McKay", annotation: "A family man is drafted to fight in a future war where the fate of humanity relies on his ability to confront the past.", image: UIImage(named: "the war is tomorrow") ?? UIImage(), rating: 6.7, genre: Genre.action),
-                       Film(title: "Black Widow", director: "Cate Shortland", annotation: "A film about Natasha Romanoff in her quests between the films Civil War and Infinity War.", image: UIImage(named: "blackwidow_lob_crd_06") ?? UIImage(), rating: 6.7, genre: Genre.action)]
-    
-    var filteredData = [Film]()
+    var filteredFilms = [Film]()
+    var films = data.films
 
     let searchController = UISearchController(searchResultsController: nil)
+    let filmStoryboard = UIStoryboard(name: "Film", bundle: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Search"
+        title = "Поиск"
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = 150
@@ -38,16 +35,30 @@ class AlsuViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return filteredData.count
+            return filteredFilms.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "FilmTableViewCell", for: indexPath) as? FilmTableViewCell else {return UITableViewCell() }
-        cell.setData(film: filteredData[indexPath.row])
+        cell.setData(film: filteredFilms[indexPath.row])
         return cell
     }
 }
+
+extension AlsuViewController:UITableViewDelegate {
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        guard let filmViewController = filmStoryboard.instantiateViewController(identifier: "FilmViewController") as? FilmViewController else { return }
+        
+        filmViewController.film = filteredFilms[indexPath.row]
+        navigationController?.pushViewController(filmViewController, animated: true)
+    }
+}
+
 // MARK: Search Configurations
 
 extension AlsuViewController:UISearchResultsUpdating {
@@ -56,13 +67,13 @@ extension AlsuViewController:UISearchResultsUpdating {
     }
     
     func filterContentForSearchText(_ searchText: String) {
-        filteredData = []
+        filteredFilms = []
         if searchText == "" {
-            filteredData = data
+            filteredFilms = films
         } else {
-            for film in data {
+            for film in films {
                 if film.title.lowercased().contains(searchText.lowercased()){
-                    filteredData.append(film)
+                    filteredFilms.append(film)
                 }
             }
         }
