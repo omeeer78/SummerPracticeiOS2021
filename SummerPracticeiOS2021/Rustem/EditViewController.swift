@@ -24,11 +24,11 @@ class EditViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func reset(_ sender: UIButton) {
+    @IBAction func resetButton(_ sender: UIButton) {
         
     }
     
-    @IBAction func save(_ sender: UIButton) {
+    @IBAction func saveButton(_ sender: UIButton) {
         let newName = nicknameTextField.text
         data.users[0].name = newName ?? data.users[0].name
         navigationController?.popToRootViewController(animated: true)

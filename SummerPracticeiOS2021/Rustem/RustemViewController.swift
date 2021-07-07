@@ -51,20 +51,20 @@ class RustemViewController: UIViewController {
     }
     
     
-    @IBAction func editProfile(_ sender: UIBarButtonItem) {
+    @IBAction func editProfileButtonItem(_ sender: UIBarButtonItem) {
         guard let editVC = storyboard?.instantiateViewController(withIdentifier: "EditViewController") else { return  }
         navigationController?.pushViewController(editVC, animated: true)
     }
     
-    @IBAction func goToWatchList(_ sender: UIButton) {
+    @IBAction func goToWatchListButton(_ sender: UIButton) {
         guard let watchList = storyboard?.instantiateViewController(withIdentifier: "EditViewController") else { return }
         navigationController?.pushViewController(watchList, animated: true)
     }
     
-    @IBAction func goToAlreadyWatched(_ sender: UIButton) {
+    @IBAction func goToAlreadyWatchedButton(_ sender: UIButton) {
     }
     
-    @IBAction func goToNowWatching(_ sender: UIButton) {
+    @IBAction func goToNowWatchingButton(_ sender: UIButton) {
     }
     
     
