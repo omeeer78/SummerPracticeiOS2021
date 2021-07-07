@@ -64,10 +64,13 @@ class Database {
     func addFriends(){
         users[0].friends = [users[1], users[2], users[3], users[4], users[5], users[6], users[7], users[8], users[9]]
     }
+    
     func addChecklist(){
-        users[0].checklist = [ChecklistCell(film: films[2], addingDate: Date.init(), status: Status.wantToWatch),
-                              ChecklistCell(film: films[5], addingDate: Date.init(), status: Status.completed),
-                              ChecklistCell(film: films[3], addingDate: Date.init(), status: Status.watching)]
+
+        users[0].checklist = [ChecklistCellModel(film: films[0], addingDate: Date(), status: Status.wantToWatch),
+                              ChecklistCellModel(film: films[5], addingDate: Date(), status: Status.completed),
+                              ChecklistCellModel(film: films[3], addingDate: Date(), status: Status.wantToWatch)]
+
         
     }
 }

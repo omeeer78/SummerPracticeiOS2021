@@ -4,7 +4,6 @@
 //
 //  Created by itisioslab on 05.07.2021.
 //
-
 import UIKit
 
 struct User {
@@ -14,7 +13,6 @@ struct User {
     var favoriteGenre: Genre
     var password: String
     var friends: [User]
-    var checklist: [ChecklistCell]
-    
-    
+    var checklist: [ChecklistCellModel]
+
 }

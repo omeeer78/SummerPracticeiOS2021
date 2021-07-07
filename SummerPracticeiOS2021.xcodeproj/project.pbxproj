@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		236FA3892694764900C982F3 /* Film.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 236FA3882694764900C982F3 /* Film.storyboard */; };
+		23C898D52695D30300125489 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C898D42695D30300125489 /* Film.swift */; };
+		23C898DD2695D4A900125489 /* CheckListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C898DC2695D4A900125489 /* CheckListViewCell.swift */; };
+		23C898DF2695D4BE00125489 /* FilmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CBC62A26935DDA003DACDF /* FilmViewController.swift */; };
 		23CBC61E269349CF003DACDF /* ChecklistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CBC61D269349CF003DACDF /* ChecklistCell.swift */; };
 		23CBC6242693503A003DACDF /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CBC6232693503A003DACDF /* Database.swift */; };
 		23CBC627269352F1003DACDF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CBC626269352F1003DACDF /* User.swift */; };
-		46A7E8D4269467F400BD6169 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A7E8D3269467F400BD6169 /* Film.swift */; };
 		46A7E8D6269469A500BD6169 /* Rustem.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46A7E8D5269469A500BD6169 /* Rustem.storyboard */; };
 		46C2150A26933FB6007AE61D /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C2150926933FB6007AE61D /* EditViewController.swift */; };
 		D10F00132690D729004999B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10F00122690D729004999B5 /* AppDelegate.swift */; };
@@ -24,16 +27,20 @@
 		D10F00322690D852004999B5 /* Alsu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D10F00312690D852004999B5 /* Alsu.storyboard */; };
 		D10F00342690D85C004999B5 /* Lilya.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D10F00332690D85C004999B5 /* Lilya.storyboard */; };
 		D10F003A2690DC86004999B5 /* RustemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10F00392690DC86004999B5 /* RustemViewController.swift */; };
-		D10F003C2690DC8A004999B5 /* AndreyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10F003B2690DC8A004999B5 /* AndreyViewController.swift */; };
+		D10F003C2690DC8A004999B5 /* ChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10F003B2690DC8A004999B5 /* ChecklistViewController.swift */; };
 		D10F003E2690DC8E004999B5 /* AlinaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10F003D2690DC8E004999B5 /* AlinaViewController.swift */; };
 		D10F00402690DC92004999B5 /* AlsuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10F003F2690DC92004999B5 /* AlsuViewController.swift */; };
 		D10F00422690DC97004999B5 /* LilyaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10F00412690DC97004999B5 /* LilyaViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		236FA3882694764900C982F3 /* Film.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Film.storyboard; sourceTree = "<group>"; };
+		23C898D42695D30300125489 /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
+		23C898DC2695D4A900125489 /* CheckListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckListViewCell.swift; sourceTree = "<group>"; };
 		23CBC61D269349CF003DACDF /* ChecklistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistCell.swift; sourceTree = "<group>"; };
 		23CBC6232693503A003DACDF /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		23CBC626269352F1003DACDF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		23CBC62A26935DDA003DACDF /* FilmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmViewController.swift; sourceTree = "<group>"; };
 		46A7E8D3269467F400BD6169 /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
 		46A7E8D5269469A500BD6169 /* Rustem.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Rustem.storyboard; sourceTree = "<group>"; };
 		46C2150926933FB6007AE61D /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
@@ -50,7 +57,7 @@
 		D10F00312690D852004999B5 /* Alsu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Alsu.storyboard; sourceTree = "<group>"; };
 		D10F00332690D85C004999B5 /* Lilya.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Lilya.storyboard; sourceTree = "<group>"; };
 		D10F00392690DC86004999B5 /* RustemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RustemViewController.swift; sourceTree = "<group>"; };
-		D10F003B2690DC8A004999B5 /* AndreyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AndreyViewController.swift; sourceTree = "<group>"; };
+		D10F003B2690DC8A004999B5 /* ChecklistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistViewController.swift; sourceTree = "<group>"; };
 		D10F003D2690DC8E004999B5 /* AlinaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlinaViewController.swift; sourceTree = "<group>"; };
 		D10F003F2690DC92004999B5 /* AlsuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlsuViewController.swift; sourceTree = "<group>"; };
 		D10F00412690DC97004999B5 /* LilyaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LilyaViewController.swift; sourceTree = "<group>"; };
@@ -67,13 +74,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23C898D12695D22300125489 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				46A7E8D3269467F400BD6169 /* Film.swift */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		23CBC61826933934003DACDF /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				23CBC61D269349CF003DACDF /* ChecklistCell.swift */,
+				23C898D42695D30300125489 /* Film.swift */,
 				23CBC6232693503A003DACDF /* Database.swift */,
 				23CBC626269352F1003DACDF /* User.swift */,
-				46A7E8D3269467F400BD6169 /* Film.swift */,
+				236FA3882694764900C982F3 /* Film.storyboard */,
+				23CBC62A26935DDA003DACDF /* FilmViewController.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -83,6 +100,7 @@
 			children = (
 				D10F00112690D729004999B5 /* SummerPracticeiOS2021 */,
 				D10F00102690D729004999B5 /* Products */,
+				23C898D12695D22300125489 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,8 +160,9 @@
 		D10F00292690D81E004999B5 /* Andrey */ = {
 			isa = PBXGroup;
 			children = (
+				23C898DC2695D4A900125489 /* CheckListViewCell.swift */,
 				D10F002D2690D846004999B5 /* Andrey.storyboard */,
-				D10F003B2690DC8A004999B5 /* AndreyViewController.swift */,
+				D10F003B2690DC8A004999B5 /* ChecklistViewController.swift */,
 			);
 			path = Andrey;
 			sourceTree = "<group>";
@@ -238,6 +257,7 @@
 				D10F00342690D85C004999B5 /* Lilya.storyboard in Resources */,
 				D10F001F2690D72A004999B5 /* LaunchScreen.storyboard in Resources */,
 				D10F001C2690D72A004999B5 /* Assets.xcassets in Resources */,
+				236FA3892694764900C982F3 /* Film.storyboard in Resources */,
 				D10F00322690D852004999B5 /* Alsu.storyboard in Resources */,
 				D10F002E2690D846004999B5 /* Andrey.storyboard in Resources */,
 				D10F001A2690D729004999B5 /* Main.storyboard in Resources */,
@@ -253,17 +273,19 @@
 			files = (
 				23CBC627269352F1003DACDF /* User.swift in Sources */,
 				D10F003E2690DC8E004999B5 /* AlinaViewController.swift in Sources */,
-				D10F003C2690DC8A004999B5 /* AndreyViewController.swift in Sources */,
+				D10F003C2690DC8A004999B5 /* ChecklistViewController.swift in Sources */,
 				23CBC61E269349CF003DACDF /* ChecklistCell.swift in Sources */,
 				D10F00172690D729004999B5 /* TabBarController.swift in Sources */,
+				23C898DD2695D4A900125489 /* CheckListViewCell.swift in Sources */,
 				D10F00132690D729004999B5 /* AppDelegate.swift in Sources */,
 				23CBC6242693503A003DACDF /* Database.swift in Sources */,
 				D10F00402690DC92004999B5 /* AlsuViewController.swift in Sources */,
 				D10F003A2690DC86004999B5 /* RustemViewController.swift in Sources */,
-				46A7E8D4269467F400BD6169 /* Film.swift in Sources */,
 				D10F00422690DC97004999B5 /* LilyaViewController.swift in Sources */,
 				D10F00152690D729004999B5 /* SceneDelegate.swift in Sources */,
 				46C2150A26933FB6007AE61D /* EditViewController.swift in Sources */,
+				23C898DF2695D4BE00125489 /* FilmViewController.swift in Sources */,
+				23C898D52695D30300125489 /* Film.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

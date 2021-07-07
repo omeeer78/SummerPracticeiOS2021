@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="orL-TR-K6p">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="orL-TR-K6p">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -55,7 +55,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Qnw-ew-0cd">
-                                        <rect key="frame" x="0.0" y="24.5" width="374" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qnw-ew-0cd" id="N6q-Pb-Cy1">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
@@ -97,6 +97,7 @@
                                 </state>
                                 <connections>
                                     <action selector="goToWatchListButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="hfb-VA-jaK"/>
+
                                 </connections>
                             </button>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="УЖЕ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nw4-m3-TXX">
@@ -124,6 +125,7 @@
                                 </state>
                                 <connections>
                                     <action selector="goToAlreadyWatchedButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ZDY-tP-adg"/>
+
                                 </connections>
                             </button>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="СЕЙЧАС" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nm-uU-myM">
@@ -151,6 +153,7 @@
                                 </state>
                                 <connections>
                                     <action selector="goToNowWatchingButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="uSC-5Y-IM4"/>
+
                                 </connections>
                             </button>
                         </subviews>
@@ -167,6 +170,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Item" image="square.and.pencil" catalog="system" id="1kh-Lq-4Sw">
                             <connections>
                                 <action selector="editProfileButtonItem:" destination="Y6W-OH-hqX" id="1vj-Nf-tui"/>
+
                                 <segue destination="Bhv-wj-t0Y" kind="show" id="QRD-MZ-H6R"/>
                             </connections>
                         </barButtonItem>
@@ -179,6 +183,7 @@
                         <outlet property="nicknameLabel" destination="5oS-Kt-tpm" id="RN0-de-fHH"/>
                         <outlet property="nowWatchingButton" destination="f9M-e1-lHh" id="rAf-Si-0Fg"/>
                         <outlet property="wantToWatchButton" destination="IVp-f5-wxw" id="xXF-rz-4qC"/>
+
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -210,6 +215,7 @@
                                 </state>
                                 <connections>
                                     <action selector="resetButton:" destination="Bhv-wj-t0Y" eventType="touchUpInside" id="HV4-ZE-Ud4"/>
+
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Новый никнейм" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ios-Ov-OGp">
@@ -246,6 +252,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="NRy-El-cmn" appends="YES" id="Mhu-qa-48A"/>
+
                                 </connections>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pencil.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="GaX-15-d2a">
@@ -267,6 +274,7 @@
                         <outlet property="genrePickerView" destination="gyG-ca-A11" id="Qg8-dB-Z95"/>
                         <outlet property="imageImageView" destination="Swh-oZ-8hS" id="fZu-aQ-pHK"/>
                         <outlet property="nicknameTextField" destination="ios-Ov-OGp" id="J6Y-GR-3Kl"/>
+
                         <outlet property="resetButton" destination="f8J-K6-6du" id="lSb-w0-eu8"/>
                         <outlet property="saveButton" destination="9xD-Id-CNi" id="Kp9-hl-wrm"/>
                     </connections>
