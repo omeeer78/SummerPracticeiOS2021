@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="orL-TR-K6p">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="orL-TR-K6p">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -56,7 +56,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Qnw-ew-0cd">
-                                        <rect key="frame" x="0.0" y="24.5" width="374" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qnw-ew-0cd" id="N6q-Pb-Cy1">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
@@ -97,7 +97,7 @@
                                     <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.296661377" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="goToWatchList:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="0kM-si-gsi"/>
+                                    <action selector="goToWatchListButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="xAd-BF-1WH"/>
                                 </connections>
                             </button>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="УЖЕ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nw4-m3-TXX">
@@ -124,7 +124,7 @@
                                     <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.296661377" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="goToAlreadyWatched:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="uaA-Eq-WUq"/>
+                                    <action selector="goToAlreadyWatchedButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="PED-XU-icq"/>
                                 </connections>
                             </button>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="СЕЙЧАС" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nm-uU-myM">
@@ -151,8 +151,7 @@
                                     <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.296661377" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="goToAlreadyWatched:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="paJ-NK-I7z"/>
-                                    <action selector="goToNowWatching:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Fvb-Sh-WLq"/>
+                                    <action selector="goToNowWatchingButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="bQz-8k-BWn"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -162,19 +161,19 @@
                     <navigationItem key="navigationItem" title="Профиль" id="jgF-hl-AC2">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="square.and.pencil" catalog="system" id="1kh-Lq-4Sw">
                             <connections>
-                                <action selector="editProfile:" destination="Y6W-OH-hqX" id="onr-hg-6op"/>
+                                <action selector="editProfileButtonItem:" destination="Y6W-OH-hqX" id="jEa-mv-hVF"/>
                                 <segue destination="Bhv-wj-t0Y" kind="show" id="QRD-MZ-H6R"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="alreadyWatched" destination="5jO-Qs-0mA" id="QeU-8p-DlA"/>
-                        <outlet property="favoriteGenre" destination="QOE-91-E0L" id="LS5-k5-iXu"/>
-                        <outlet property="image" destination="EVp-ld-b2i" id="Ma7-na-9tc"/>
-                        <outlet property="nickname" destination="5oS-Kt-tpm" id="RN0-de-fHH"/>
-                        <outlet property="nowWatching" destination="f9M-e1-lHh" id="rAf-Si-0Fg"/>
-                        <outlet property="wantToWatch" destination="IVp-f5-wxw" id="xXF-rz-4qC"/>
+                        <outlet property="alreadyWatchedButton" destination="5jO-Qs-0mA" id="Vsz-ll-gXl"/>
+                        <outlet property="favoriteGenreButton" destination="QOE-91-E0L" id="oY7-dB-c30"/>
+                        <outlet property="imageImageView" destination="EVp-ld-b2i" id="sFX-7g-Bjr"/>
+                        <outlet property="nicknameLabel" destination="5oS-Kt-tpm" id="SRJ-E5-5kr"/>
+                        <outlet property="nowWatchingButton" destination="f9M-e1-lHh" id="f8j-uo-crX"/>
+                        <outlet property="wantToWatchButton" destination="IVp-f5-wxw" id="pMt-KE-Bjq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -195,7 +194,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Сохранить изменения"/>
                                 <connections>
-                                    <action selector="save:" destination="Bhv-wj-t0Y" eventType="touchUpInside" id="FHe-mp-w7f"/>
+                                    <action selector="saveButton:" destination="Bhv-wj-t0Y" eventType="touchUpInside" id="EVO-dO-h4D"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Новый никнейм" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ios-Ov-OGp">
@@ -229,7 +228,7 @@
                                     <color key="titleColor" systemColor="systemRedColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="reset:" destination="Bhv-wj-t0Y" eventType="touchUpInside" id="fxL-Dg-bH5"/>
+                                    <action selector="resetButton:" destination="Bhv-wj-t0Y" eventType="touchUpInside" id="D6g-es-Aj7"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -239,7 +238,7 @@
                     <navigationItem key="navigationItem" title="Изменить" id="uib-u1-qMt"/>
                     <connections>
                         <outlet property="genrePickerView" destination="gyG-ca-A11" id="Qg8-dB-Z95"/>
-                        <outlet property="nicknameField" destination="ios-Ov-OGp" id="N47-qS-L0P"/>
+                        <outlet property="nicknameTextField" destination="ios-Ov-OGp" id="fnQ-0H-gyv"/>
                         <outlet property="resetButton" destination="f8J-K6-6du" id="lSb-w0-eu8"/>
                         <outlet property="saveButton" destination="9xD-Id-CNi" id="Kp9-hl-wrm"/>
                     </connections>

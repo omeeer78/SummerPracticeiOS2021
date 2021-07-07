@@ -57,10 +57,10 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="addingDate" destination="nIe-6u-M3O" id="dZJ-Qs-mvv"/>
-                                            <outlet property="director" destination="5Bm-f1-nCt" id="0n9-nH-ata"/>
-                                            <outlet property="genre" destination="giP-0F-9cf" id="58A-wb-XFk"/>
-                                            <outlet property="title" destination="RKd-Yw-v8y" id="ceQ-dK-hgN"/>
+                                            <outlet property="addingDateLabel" destination="nIe-6u-M3O" id="sCa-wm-aaf"/>
+                                            <outlet property="directorLabel" destination="5Bm-f1-nCt" id="gSg-PF-jwL"/>
+                                            <outlet property="genreLabel" destination="giP-0F-9cf" id="Nx8-si-chR"/>
+                                            <outlet property="titleLabel" destination="RKd-Yw-v8y" id="BOW-rh-DBn"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

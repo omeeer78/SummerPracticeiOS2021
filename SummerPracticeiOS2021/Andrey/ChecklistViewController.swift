@@ -29,10 +29,6 @@ class ChecklistViewController: UIViewController {
         currentStatus = page
         tableView.reloadData()
     }
-    
-    
-    
-    
 }
 
 extension ChecklistViewController:UITableViewDelegate{

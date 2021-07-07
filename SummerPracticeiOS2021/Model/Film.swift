@@ -2,8 +2,9 @@
 //  Film.swift
 //  SummerPracticeiOS2021
 //
-//  Created by Alina Bikkinina on 05.07.2021.
+//  Created by itisioslab on 07.07.2021.
 //
+
 import UIKit
 
 struct Film {

@@ -18,7 +18,7 @@ class CheckListViewCell: UITableViewCell {
         titleLabel.text = checklistCell.film.title
         directorLabel.text = checklistCell.film.director
         genreLabel.text = checklistCell.film.genre.rawValue
-        addingDateLabel.text = DateFormatter().string(from:checklistCell.addingDate)
+        addingDateLabel.text = DateFormatter().string(from: checklistCell.addingDate)
     }
     
 }
