@@ -75,7 +75,7 @@ class Database {
                               ChecklistCellModel(film: films[6], addingDate: Date(), status: Status.completed),
                               ChecklistCellModel(film: films[8], addingDate: Date(), status: Status.watching),
                               ChecklistCellModel(film: films[7], addingDate: Date(), status: Status.wantToWatch),
-                              ChecklistCellModel(film: films[1], addingDate: Date(), status: Status.wantToWatch)]
+                              ChecklistCellModel(film: films[17], addingDate: Date(), status: Status.wantToWatch)]
         
     }
     

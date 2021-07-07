@@ -46,13 +46,13 @@ class FilmViewController: UIViewController {
     func setRatingColor(rate: Double){
         
         if rate <= 4 {
-            ratingLabel.textColor = .red
+            ratingLabel.textColor = .systemRed
         }
         if rate > 4 && rate <= 7 {
-            ratingLabel.textColor = .orange
+            ratingLabel.textColor = .systemYellow
         }
         if rate > 7 {
-            ratingLabel.textColor = .green
+            ratingLabel.textColor = .systemGreen
         }
     }
     
