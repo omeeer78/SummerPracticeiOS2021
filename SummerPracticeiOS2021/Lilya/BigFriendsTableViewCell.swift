@@ -12,7 +12,7 @@ class BigFriendsTableViewCell: UITableViewCell {
     @IBOutlet weak var friendAvatar: UIImageView!
     @IBOutlet weak var friendName: UILabel!
 
-    func SetData (friend: FriendsCellData){
+    func SetData (friend: User){
         friendName.text = friend.name
         friendAvatar.image = friend.image
     }
