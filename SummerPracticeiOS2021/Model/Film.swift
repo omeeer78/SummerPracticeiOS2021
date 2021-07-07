@@ -14,13 +14,15 @@ struct Film {
     let image: UIImage
     let rating: Double
     let genre: Genre
+    
 }
 
+
 enum Genre: String {
-    
-    case drama = "DRAMA"
-    case horror = "HORROR"
-    case comedy = "COMEDY"
-    case thriller = "THRILLER"
-    case action = "ACTION"
+
+    case drama = "Драма"
+    case horror = "Хоррор"
+    case comedy = "Комедия"
+    case thriller = "Триллер"
+    case action = "Экшн"
 }
