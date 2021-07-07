@@ -6,6 +6,8 @@ class EditViewController: UIViewController {
     @IBOutlet weak var genrePickerView: UIPickerView!
     @IBOutlet weak var resetButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var imageImageView: UIImageView!
+    
     
     
     func favoGenreId() -> Int {
@@ -21,11 +23,12 @@ class EditViewController: UIViewController {
         genrePickerView.delegate = self
         nicknameTextField.text = data.users[0].name
         genrePickerView.selectRow(favoGenreId(), inComponent: 0, animated: true)
-        // Do any additional setup after loading the view.
+        imageImageView.image = data.users[0].image
     }
     
     @IBAction func resetButton(_ sender: UIButton) {
-        
+        data.users[0].checklist = []
+        navigationController?.popToRootViewController(animated: true)
     }
     
     @IBAction func saveButton(_ sender: UIButton) {
@@ -33,7 +36,6 @@ class EditViewController: UIViewController {
         data.users[0].name = newName ?? data.users[0].name
         navigationController?.popToRootViewController(animated: true)
     }
-    
 }
 extension UIViewController: UIPickerViewDataSource{
     public func numberOfComponents(in pickerView: UIPickerView) -> Int {

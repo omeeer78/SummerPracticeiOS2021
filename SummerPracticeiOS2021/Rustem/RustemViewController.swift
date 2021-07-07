@@ -14,19 +14,17 @@ class RustemViewController: UIViewController {
     @IBOutlet weak var wantToWatchButton: UIButton!
     @IBOutlet weak var alreadyWatchedButton: UIButton!
     @IBOutlet weak var nowWatchingButton: UIButton!
-    @IBOutlet weak var favoriteGenreButton: UILabel!
+    @IBOutlet weak var favoriteGenreLabel: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        /*var wantToWatchValue = data.users[0].checklist.filter()
-         var nowWatchingValue = data.users[0].checklist.filter()
-         var alreadyWatchedValue = data.users[0].checklist.filter()
-         wantToWatch.currentTitle =
-         nowWatching.currentTitle =
-         alreadyWatched.currentTitle =
-         */
+//        let wantToWatchValue = data.users[0].checklist.filter{$0.status == Status.wantToWatch}.count
+//        let nowWatchingValue = data.users[0].checklist.filter{$0.status == Status.watching}.count
+//        let alreadyWatchedValue = data.users[0].checklist.filter{$0.status == Status.completed}.count
+//        wantToWatchButton.setTitle(String(wantToWatchValue), for: .normal)
+//        nowWatchingButton.setTitle(String(nowWatchingValue), for: .normal)
+//        alreadyWatchedButton.setTitle(String(alreadyWatchedValue), for: .normal)
         
     }
     
@@ -47,7 +45,7 @@ class RustemViewController: UIViewController {
         case Genre.thriller:
             genre = "триллеры"
         }
-        favoriteGenreButton.text = genre
+        favoriteGenreLabel.text = genre
     }
     
     
@@ -66,8 +64,5 @@ class RustemViewController: UIViewController {
     
     @IBAction func goToNowWatchingButton(_ sender: UIButton) {
     }
-    
-    
-    
     
 }
