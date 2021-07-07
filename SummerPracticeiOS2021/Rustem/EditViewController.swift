@@ -2,18 +2,25 @@
 import UIKit
 
 class EditViewController: UIViewController {
-    @IBOutlet weak var nicknameField: UITextField!
+    @IBOutlet weak var nicknameTextField: UITextField!
     @IBOutlet weak var genrePickerView: UIPickerView!
     @IBOutlet weak var resetButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
     
     
+    func favoGenreId() -> Int {
+        let favGenre = data.users[0].favoriteGenre
+        let genres:[String] = [Genre.action.rawValue, Genre.comedy.rawValue, Genre.drama.rawValue, Genre.horror.rawValue, Genre.thriller.rawValue]
+        guard let genreRow = genres.firstIndex(of: favGenre.rawValue) else { return 0}
+        return genreRow
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         genrePickerView.dataSource = self
         genrePickerView.delegate = self
-        nicknameField.text = data.users[0].name
+        nicknameTextField.text = data.users[0].name
+        genrePickerView.selectRow(favoGenreId(), inComponent: 0, animated: true)
         // Do any additional setup after loading the view.
     }
     
@@ -22,8 +29,8 @@ class EditViewController: UIViewController {
     }
     
     @IBAction func save(_ sender: UIButton) {
-        let newName = nicknameField.text
-        data.users[0].name = newName!
+        let newName = nicknameTextField.text
+        data.users[0].name = newName ?? data.users[0].name
         navigationController?.popToRootViewController(animated: true)
     }
     
@@ -40,10 +47,8 @@ extension UIViewController: UIPickerViewDataSource{
 
 extension UIViewController: UIPickerViewDelegate{
     public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        let favGenre = data.users[0].favoriteGenre
-        let genres:[String] = [Genre.action.rawValue, Genre.comedy.rawValue, Genre.drama.rawValue, Genre.horror.rawValue, Genre.thriller.rawValue] as? [String] ?? []
-        genres.firstIndex(of: favGenre.rawValue)
-        return genres[0]
+        let genres:[String] = [Genre.action.rawValue, Genre.comedy.rawValue, Genre.drama.rawValue, Genre.horror.rawValue, Genre.thriller.rawValue]
+        return genres[row]
     }
     
     public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {

@@ -9,19 +9,31 @@ import UIKit
 
 class RustemViewController: UIViewController {
     
-    @IBOutlet weak var nickname: UILabel!
-    @IBOutlet weak var image: UIImageView!
-    @IBOutlet weak var wantToWatch: UIButton!
-    @IBOutlet weak var alreadyWatched: UIButton!
-    @IBOutlet weak var nowWatching: UIButton!
-    @IBOutlet weak var favoriteGenre: UILabel!
-    
+    @IBOutlet weak var nicknameLabel: UILabel!
+    @IBOutlet weak var imageImageView: UIImageView!
+    @IBOutlet weak var wantToWatchButton: UIButton!
+    @IBOutlet weak var alreadyWatchedButton: UIButton!
+    @IBOutlet weak var nowWatchingButton: UIButton!
+    @IBOutlet weak var favoriteGenreButton: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        image.image = data.users[0].image
-        nickname.text = data.users[0].name
+        
+        /*var wantToWatchValue = data.users[0].checklist.filter()
+         var nowWatchingValue = data.users[0].checklist.filter()
+         var alreadyWatchedValue = data.users[0].checklist.filter()
+         wantToWatch.currentTitle =
+         nowWatching.currentTitle =
+         alreadyWatched.currentTitle =
+         */
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        imageImageView.image = data.users[0].image
+        nicknameLabel.text = data.users[0].name
         var genre = "всё"
         switch data.users[0].favoriteGenre {
         case Genre.action:
@@ -35,15 +47,7 @@ class RustemViewController: UIViewController {
         case Genre.thriller:
             genre = "триллеры"
         }
-        favoriteGenre.text = genre
-        /*var wantToWatchValue = data.users[0].checklist.filter()
-        var nowWatchingValue = data.users[0].checklist.filter()
-        var alreadyWatchedValue = data.users[0].checklist.filter()
-        wantToWatch.currentTitle =
-            nowWatching.currentTitle =
-            alreadyWatched.currentTitle =
- */
-        
+        favoriteGenreButton.text = genre
     }
     
     

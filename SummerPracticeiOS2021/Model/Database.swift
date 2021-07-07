@@ -7,8 +7,17 @@
 
 import UIKit
 
-struct Database {
-    var users: [User] = [User(name: "unterlantas", image: UIImage(named: "justice") ?? UIImage(), favoriteGenre: Genre.thriller, password: "123", friends: [], checklist: [])]
+class Database {
+    var users: [User] = [User(name: "unterlantas", image: UIImage(named: "drag") ?? UIImage(), favoriteGenre: Genre.thriller, password: "123", friends: [], checklist: []),
+                         User(name: "Andrewoch", image: UIImage(named: "durov") ?? UIImage(), favoriteGenre: Genre.horror, password: "432", friends: [], checklist: []),
+                         User(name: "zikibikk", image: UIImage(named: "rapuncel") ?? UIImage(), favoriteGenre: Genre.drama, password: "543", friends: [], checklist: []),
+                         User(name: "peachysangria", image: UIImage(named: "grey") ?? UIImage(), favoriteGenre: Genre.comedy, password: "600", friends: [], checklist: []),
+                         User(name: "etozhealsu", image: UIImage(named: "buster") ?? UIImage(), favoriteGenre: Genre.action, password: "641", friends: [], checklist: []),
+                         User(name: "Chakski", image: UIImage(named: "vigvam") ?? UIImage(), favoriteGenre: Genre.comedy, password: "043", friends: [], checklist: []),
+                         User(name: "etoalsu", image: UIImage(named: "chelka") ?? UIImage(), favoriteGenre: Genre.comedy, password: "232", friends: [], checklist: []),
+                         User(name: "kemal645", image: UIImage(named: "papich") ?? UIImage(), favoriteGenre: Genre.action, password: "000", friends: [], checklist: []),
+                         User(name: "devilish_smile", image: UIImage(named: "pink") ?? UIImage(), favoriteGenre: Genre.drama, password: "666", friends: [], checklist: []),
+                         User(name: "primetime11", image: UIImage(named: "guf") ?? UIImage(), favoriteGenre: Genre.thriller, password: "111", friends: [], checklist: [])]
     var films: [Film] = [Film(title: "Побег из Шоушенка", director: "Фрэнк Дарабонт", annotation: "Выдающаяся драма о силе таланта, важности дружбы,                       стремлении к свободе и Рите Хэйворт", image: UIImage(named: "Shawshenk") ?? UIImage(), rating: 8.9, genre: Genre.drama),
                          Film(title: "Чёрная роза", director: "Александр Невский", annotation: "Майор московской полиции отправляется в Лос-Анджелес для помощи в расследовании серии убийств русских эмигрантов.", image: UIImage(named: "black rose") ?? UIImage(), rating: 1.5, genre: Genre.action),
                          Film(title: "Интерстеллар", director: "Кристофер Нолан", annotation: "Фантастический эпос про задыхающуюся Землю, космические полеты и парадоксы времени.", image: UIImage(named: "interstellar") ?? UIImage(), rating: 8.6, genre: Genre.drama),
@@ -45,7 +54,17 @@ struct Database {
                          Film(title: "Волк с Уолл-Стрит", director: "Мартин Скорсезе", annotation: "Восхождение циника-гедониста на бизнес-олимп 1980-х. Блистательный тандем Леонардо ДиКаприо и Мартина Скорсезе.", image: UIImage(named: "wolf") ?? UIImage(), rating: 8.1, genre: Genre.comedy),
                          Film(title: "Однажды в Голливуде", director: "Квентин Тарантино", annotation: "Можно ли переписать историю? Самый ностальгический фильм Тарантино — с Шэрон Тейт, Брюсом Ли и Чарли Мэнсоном.", image: UIImage(named: "hollywood") ?? UIImage(), rating: 8.0, genre: Genre.action),
                          Film(title: "007: Не время умирать", director: "Кэри Дзёдзи Фуканага", annotation: "Бонд попадает в ловушку к таинственному злодею, вооруженному опасным технологическим оружием.", image: UIImage(named: "no time") ?? UIImage(), rating: 7.5, genre: Genre.action)]
- 
+    
+    func addFriends(){
+        users[0].friends = [users[1], users[2], users[3], users[4], users[5], users[6], users[7], users[8], users[9]]
+    }
+    func addChecklist(){
+        
+        users[0].checklist = [ChecklistCell(film: films[0], addingDate: Date.init(), status: Status.wantToWatch),
+                              ChecklistCell(film: films[5], addingDate: Date.init(), status: Status.completed),
+                              ChecklistCell(film: films[3], addingDate: Date.init(), status: Status.wantToWatch)]
+    }
 }
- 
+
 var data = Database()
+
