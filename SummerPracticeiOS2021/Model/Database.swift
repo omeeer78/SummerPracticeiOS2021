@@ -8,7 +8,13 @@
 import UIKit
 
 class Database {
-    var users: [User] = [User(name: "unterlantas", image: UIImage(named: "drag") ?? UIImage(), favoriteGenre: Genre.thriller, password: "123", friends: [], checklist: []),
+    
+    init() {
+        addFriends()
+        addChecklist()
+    }
+    
+    var users: [User] = [User(name: "unterlantas", image: #imageLiteral(resourceName: "drag"), favoriteGenre: Genre.thriller, password: "123", friends: [], checklist: []),
                          User(name: "Andrewoch", image: UIImage(named: "durov") ?? UIImage(), favoriteGenre: Genre.horror, password: "432", friends: [], checklist: []),
                          User(name: "zikibikk", image: UIImage(named: "rapuncel") ?? UIImage(), favoriteGenre: Genre.drama, password: "543", friends: [], checklist: []),
                          User(name: "peachysangria", image: UIImage(named: "grey") ?? UIImage(), favoriteGenre: Genre.comedy, password: "600", friends: [], checklist: []),
@@ -59,10 +65,10 @@ class Database {
         users[0].friends = [users[1], users[2], users[3], users[4], users[5], users[6], users[7], users[8], users[9]]
     }
     func addChecklist(){
-        
         users[0].checklist = [ChecklistCell(film: films[0], addingDate: Date.init(), status: Status.wantToWatch),
                               ChecklistCell(film: films[5], addingDate: Date.init(), status: Status.completed),
                               ChecklistCell(film: films[3], addingDate: Date.init(), status: Status.wantToWatch)]
+        
     }
 }
 
