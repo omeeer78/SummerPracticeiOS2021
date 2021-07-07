@@ -91,6 +91,7 @@
                     <tabBarItem key="tabBarItem" title="Чеклист" image="checkmark.square" catalog="system" id="NdC-Cb-5eg"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="segmentedControll" destination="25N-w8-OXc" id="PRD-nr-4oN"/>
                         <outlet property="tableView" destination="OhJ-Rv-PZf" id="irx-3K-Yfs"/>
                         <segue destination="tEC-Og-DPr" kind="presentation" identifier="showFilm" id="2Py-oY-mxV"/>
                     </connections>

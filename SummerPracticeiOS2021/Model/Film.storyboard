@@ -75,6 +75,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addToWantToWatch:" destination="5tz-Gv-OJJ" eventType="touchUpInside" id="6cv-lD-m4q"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RtH-CE-M7W">
                                 <rect key="frame" x="154" y="446" width="104" height="48"/>
@@ -89,6 +92,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addToWatchingNow:" destination="5tz-Gv-OJJ" eventType="touchUpInside" id="bzN-qf-hyn"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="73i-PP-36N">
                                 <rect key="frame" x="289" y="347" width="117" height="44"/>
@@ -117,6 +123,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addToCompleted:" destination="5tz-Gv-OJJ" eventType="touchUpInside" id="Z1R-uH-QDQ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8TP-iq-msn"/>

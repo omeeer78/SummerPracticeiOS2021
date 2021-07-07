@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol FilmViewControllerDelegate: AnyObject {
+    func reloadTable(page: Int)
+}
+
 class FilmViewController: UIViewController {
     
     @IBOutlet weak var filmTitleLabel: UILabel!
@@ -23,6 +27,8 @@ class FilmViewController: UIViewController {
     
     var film : Film?
     
+    weak var delegate: FilmViewControllerDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,6 +41,7 @@ class FilmViewController: UIViewController {
         
         setRatingColor(rate: film?.rating ?? 0.0)
     }
+    
     
     func setRatingColor(rate: Double){
         
@@ -49,4 +56,28 @@ class FilmViewController: UIViewController {
         }
     }
     
+    @IBAction func addToWantToWatch(_ sender: Any) {
+        guard let film = film else { return }
+        
+        data.updateFilmCheckListStatus(film: film, newStatus: .wantToWatch)
+        delegate?.reloadTable(page: Status.wantToWatch.rawValue)
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func addToWatchingNow(_ sender: Any) {
+        
+        guard let film = film else { return }
+        
+        data.updateFilmCheckListStatus(film: film, newStatus: .watching)
+        delegate?.reloadTable(page: Status.watching.rawValue)
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func addToCompleted(_ sender: Any) {
+        guard let film = film else { return }
+        
+        data.updateFilmCheckListStatus(film: film, newStatus: .completed)
+        delegate?.reloadTable(page: Status.completed.rawValue)
+        self.dismiss(animated: true, completion: nil)
+    }
 }

@@ -2,9 +2,9 @@ import UIKit
 
 struct ChecklistCellModel {
     
-    let film: Film
-    let addingDate: Date
-    let status: Status
+    var film: Film
+    var addingDate: Date
+    var status: Status
 }
 
 

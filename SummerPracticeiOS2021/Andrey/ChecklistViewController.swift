@@ -9,14 +9,20 @@ import UIKit
 
 class ChecklistViewController: UIViewController {
     
+    @IBOutlet weak var segmentedControll: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
-    var checklistData:[ChecklistCellModel] = data.users[0].checklist
+    var checklistData: [ChecklistCellModel] = data.users[0].checklist
     var currentStatus = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
     }
     
     
@@ -28,6 +34,7 @@ class ChecklistViewController: UIViewController {
     func openChecklistPage(_ page: Int){
         currentStatus = page
         tableView.reloadData()
+        segmentedControll.selectedSegmentIndex = page
     }
 }
 
@@ -41,10 +48,12 @@ extension ChecklistViewController:UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let filmStoryboard = UIStoryboard(name: "Film",bundle: nil)
+        let filteredChecklists = checklistData.filter{ $0.status.rawValue == currentStatus }
         
+        let filmStoryboard = UIStoryboard(name: "Film",bundle: nil)
         guard let filmViewController = filmStoryboard.instantiateViewController(identifier: "FilmViewController")as? FilmViewController else {return}
-        filmViewController.film = checklistData[indexPath.row].film
+        filmViewController.film = filteredChecklists[indexPath.row].film
+        filmViewController.delegate = self
         present(filmViewController, animated: true, completion: nil)
     }
     
@@ -59,7 +68,15 @@ extension ChecklistViewController:UITableViewDataSource{
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CheckListViewCell", for: indexPath) as? CheckListViewCell else {
             return UITableViewCell()
         }
-        cell.setData(checklistData[indexPath.row])
+        let filteredChecklists = checklistData.filter{ $0.status.rawValue == currentStatus }
+        cell.setData(filteredChecklists[indexPath.row])
         return cell
+    }
+}
+
+extension ChecklistViewController: FilmViewControllerDelegate {
+    func reloadTable(page: Int) {
+        checklistData = data.users[0].checklist
+        openChecklistPage(page)
     }
 }

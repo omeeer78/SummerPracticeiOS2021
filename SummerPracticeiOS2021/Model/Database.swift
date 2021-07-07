@@ -67,9 +67,24 @@ class Database {
     
     func addChecklist(){
         users[0].checklist = [ChecklistCellModel(film: films[0], addingDate: Date(), status: Status.wantToWatch),
+                              ChecklistCellModel(film: films[9], addingDate: Date(), status: Status.completed),
+                              ChecklistCellModel(film: films[2], addingDate: Date(), status: Status.watching),
+                              ChecklistCellModel(film: films[3], addingDate: Date(), status: Status.completed),
+                              ChecklistCellModel(film: films[4], addingDate: Date(), status: Status.watching),
                               ChecklistCellModel(film: films[5], addingDate: Date(), status: Status.completed),
-                              ChecklistCellModel(film: films[3], addingDate: Date(), status: Status.wantToWatch)]
+                              ChecklistCellModel(film: films[6], addingDate: Date(), status: Status.completed),
+                              ChecklistCellModel(film: films[8], addingDate: Date(), status: Status.watching),
+                              ChecklistCellModel(film: films[7], addingDate: Date(), status: Status.wantToWatch),
+                              ChecklistCellModel(film: films[1], addingDate: Date(), status: Status.wantToWatch)]
         
+    }
+    
+    func updateFilmCheckListStatus(film: Film, newStatus:Status){
+        
+        guard let index = users[0].checklist.firstIndex(where: { $0.film.title == film.title }) else { return }
+        
+        let newChecklistModel = ChecklistCellModel(film: film, addingDate: users[0].checklist[index].addingDate, status: newStatus)
+        users[0].checklist[index] = newChecklistModel
     }
 }
 
