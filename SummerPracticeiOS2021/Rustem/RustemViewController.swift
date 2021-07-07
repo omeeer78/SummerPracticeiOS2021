@@ -19,12 +19,7 @@ class RustemViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let wantToWatchValue = data.users[0].checklist.filter{$0.status == Status.wantToWatch}.count
-//        let nowWatchingValue = data.users[0].checklist.filter{$0.status == Status.watching}.count
-//        let alreadyWatchedValue = data.users[0].checklist.filter{$0.status == Status.completed}.count
-//        wantToWatchButton.setTitle(String(wantToWatchValue), for: .normal)
-//        nowWatchingButton.setTitle(String(nowWatchingValue), for: .normal)
-//        alreadyWatchedButton.setTitle(String(alreadyWatchedValue), for: .normal)
+        
         
     }
     
@@ -32,6 +27,12 @@ class RustemViewController: UIViewController {
         super.viewWillAppear(true)
         imageImageView.image = data.users[0].image
         nicknameLabel.text = data.users[0].name
+        let wantToWatchValue = data.users[0].checklist.filter{$0.status == Status.wantToWatch}.count
+        let nowWatchingValue = data.users[0].checklist.filter{$0.status == Status.watching}.count
+        let alreadyWatchedValue = data.users[0].checklist.filter{$0.status == Status.completed}.count
+        wantToWatchButton.setTitle(String(wantToWatchValue), for: .normal)
+        nowWatchingButton.setTitle(String(nowWatchingValue), for: .normal)
+        alreadyWatchedButton.setTitle(String(alreadyWatchedValue), for: .normal)
         var genre = "всё"
         switch data.users[0].favoriteGenre {
         case Genre.action:

@@ -24,6 +24,13 @@ class EditViewController: UIViewController {
         nicknameTextField.text = data.users[0].name
         genrePickerView.selectRow(favoGenreId(), inComponent: 0, animated: true)
         imageImageView.image = data.users[0].image
+        
+    }
+    
+    @IBAction func changeImageButton(_ sender: Any){
+        print("Hi")
+        imageImageView.image = imageImageView.highlightedImage
+        imageImageView.image = imageImageView.image
     }
     
     @IBAction func resetButton(_ sender: UIButton) {
