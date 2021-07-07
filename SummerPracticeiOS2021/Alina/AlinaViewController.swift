@@ -8,7 +8,7 @@
 import UIKit
 
 class AlinaViewController: UIViewController {
-
+    
     @IBOutlet weak var newsUITableView: UITableView!
     
     var actions: [Action] = []
@@ -45,12 +45,15 @@ extension AlinaViewController: UITableViewDelegate {
         362
     }
     
-//заменить AlinaViewController на экран фильма, это модальный переход на него
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         tableView.deselectRow(at: indexPath, animated: true)
-//        guard let alinaViewController = storyboard?.instantiateViewController(withIdentifier: "AlinaViewController") as? AlinaViewController else { return }
-//    alinaViewController.film = фсешщты[indexPath.row].film
-//    present(alinaViewController, animated: true)
+        
+        let filmStoryboard = UIStoryboard(name: "Film",bundle: nil)
+        
+        guard let filmViewController = filmStoryboard.instantiateViewController(withIdentifier: "FilmViewController") as? FilmViewController else { return }
+        filmViewController.film = actions[indexPath.row].recommendedFilm
+        present(filmViewController, animated: true)
     }
 }
 
