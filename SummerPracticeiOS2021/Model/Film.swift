@@ -7,6 +7,7 @@
 import UIKit
 
 struct Film {
+    
     let title: String
     let director: String
     let annotation: String
@@ -16,6 +17,7 @@ struct Film {
 }
 
 enum Genre: String {
+    
     case drama = "DRAMA"
     case horror = "HORROR"
     case comedy = "COMEDY"

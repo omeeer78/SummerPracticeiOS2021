@@ -10,16 +10,13 @@ import UIKit
 class ChecklistViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    //    let dataBase = Database()
-    var checklistData:[ChecklistCellModel] = data.users[0].checklist //users[0].checklist
+    var checklistData:[ChecklistCellModel] = data.users[0].checklist
     var currentStatus = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        data.setDependencies()
-        checklistData = data.users[0].checklist
     }
     
     
