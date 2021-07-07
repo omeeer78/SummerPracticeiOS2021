@@ -123,12 +123,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="annotation" destination="odE-WH-2en" id="48L-Ab-jQh"/>
-                        <outlet property="director" destination="3hh-Kf-4rB" id="9gj-er-ONe"/>
-                        <outlet property="filmTitle" destination="ZSB-Fd-DsD" id="Esf-Ci-kCn"/>
-                        <outlet property="genre" destination="ZNC-zh-lFy" id="byf-9T-7VA"/>
-                        <outlet property="image" destination="ahm-iD-2wl" id="bpt-tV-bg0"/>
-                        <outlet property="rating" destination="mS6-XT-MFb" id="iil-bz-vTr"/>
+                        <outlet property="annotationLabel" destination="odE-WH-2en" id="tdN-L3-H5U"/>
+                        <outlet property="directorLabel" destination="3hh-Kf-4rB" id="hMB-r3-rnZ"/>
+                        <outlet property="filmTitleLabel" destination="ZSB-Fd-DsD" id="PmO-xE-toJ"/>
+                        <outlet property="genreLabel" destination="ZNC-zh-lFy" id="4jh-uI-LhK"/>
+                        <outlet property="imageView" destination="ahm-iD-2wl" id="foV-Uz-Zsh"/>
+                        <outlet property="ratingLabel" destination="mS6-XT-MFb" id="EVn-Ks-A05"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="40G-bU-jpN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
