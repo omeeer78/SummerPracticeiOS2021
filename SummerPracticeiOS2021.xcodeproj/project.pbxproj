@@ -26,7 +26,7 @@
 		D10F00322690D852004999B5 /* Alsu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D10F00312690D852004999B5 /* Alsu.storyboard */; };
 		D10F00342690D85C004999B5 /* Lilya.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D10F00332690D85C004999B5 /* Lilya.storyboard */; };
 		D10F003A2690DC86004999B5 /* RustemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10F00392690DC86004999B5 /* RustemViewController.swift */; };
-		D10F003C2690DC8A004999B5 /* AndreyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10F003B2690DC8A004999B5 /* AndreyViewController.swift */; };
+		D10F003C2690DC8A004999B5 /* ChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10F003B2690DC8A004999B5 /* ChecklistViewController.swift */; };
 		D10F003E2690DC8E004999B5 /* AlinaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10F003D2690DC8E004999B5 /* AlinaViewController.swift */; };
 		D10F00402690DC92004999B5 /* AlsuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10F003F2690DC92004999B5 /* AlsuViewController.swift */; };
 		D10F00422690DC97004999B5 /* LilyaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10F00412690DC97004999B5 /* LilyaViewController.swift */; };
@@ -54,7 +54,7 @@
 		D10F00312690D852004999B5 /* Alsu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Alsu.storyboard; sourceTree = "<group>"; };
 		D10F00332690D85C004999B5 /* Lilya.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Lilya.storyboard; sourceTree = "<group>"; };
 		D10F00392690DC86004999B5 /* RustemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RustemViewController.swift; sourceTree = "<group>"; };
-		D10F003B2690DC8A004999B5 /* AndreyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AndreyViewController.swift; sourceTree = "<group>"; };
+		D10F003B2690DC8A004999B5 /* ChecklistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistViewController.swift; sourceTree = "<group>"; };
 		D10F003D2690DC8E004999B5 /* AlinaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlinaViewController.swift; sourceTree = "<group>"; };
 		D10F003F2690DC92004999B5 /* AlsuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlsuViewController.swift; sourceTree = "<group>"; };
 		D10F00412690DC97004999B5 /* LilyaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LilyaViewController.swift; sourceTree = "<group>"; };
@@ -149,7 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				D10F002D2690D846004999B5 /* Andrey.storyboard */,
-				D10F003B2690DC8A004999B5 /* AndreyViewController.swift */,
+				D10F003B2690DC8A004999B5 /* ChecklistViewController.swift */,
 				23CBC62026934B62003DACDF /* CheckListViewCell.swift */,
 			);
 			path = Andrey;
@@ -261,7 +261,7 @@
 				23CBC627269352F1003DACDF /* User.swift in Sources */,
 				23CBC62126934B62003DACDF /* CheckListViewCell.swift in Sources */,
 				D10F003E2690DC8E004999B5 /* AlinaViewController.swift in Sources */,
-				D10F003C2690DC8A004999B5 /* AndreyViewController.swift in Sources */,
+				D10F003C2690DC8A004999B5 /* ChecklistViewController.swift in Sources */,
 				23CBC61E269349CF003DACDF /* ChecklistCell.swift in Sources */,
 				D10F00172690D729004999B5 /* TabBarController.swift in Sources */,
 				D10F00132690D729004999B5 /* AppDelegate.swift in Sources */,

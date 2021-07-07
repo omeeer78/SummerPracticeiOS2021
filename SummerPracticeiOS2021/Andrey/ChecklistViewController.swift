@@ -7,18 +7,19 @@
 
 import UIKit
 
-class AndreyViewController: UIViewController {
+class ChecklistViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    let dataBase = Database()
-    var checklistData:[ChecklistCell] = data.users[0].checklist
+    //    let dataBase = Database()
+    var checklistData:[ChecklistCellModel] = data.users[0].checklist //users[0].checklist
     var currentStatus = 0
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        data.setDependencies()
+        checklistData = data.users[0].checklist
     }
     
     
@@ -37,7 +38,7 @@ class AndreyViewController: UIViewController {
     
 }
 
-extension AndreyViewController:UITableViewDelegate{
+extension ChecklistViewController:UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         80
@@ -56,7 +57,7 @@ extension AndreyViewController:UITableViewDelegate{
     
 }
 
-extension AndreyViewController:UITableViewDataSource{
+extension ChecklistViewController:UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         checklistData.filter{ $0.status.rawValue == currentStatus }.count
     }

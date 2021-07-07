@@ -9,43 +9,43 @@ import UIKit
 
 class FilmViewController: UIViewController {
     
-    @IBOutlet weak var filmTitle: UILabel!
+    @IBOutlet weak var filmTitleLabel: UILabel!
     
-    @IBOutlet weak var rating: UILabel!
+    @IBOutlet weak var ratingLabel: UILabel!
     
-    @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var imageView: UIImageView!
     
-    @IBOutlet weak var genre: UILabel!
+    @IBOutlet weak var genreLabel: UILabel!
     
-    @IBOutlet weak var annotation: UILabel!
+    @IBOutlet weak var annotationLabel: UILabel!
     
-    @IBOutlet weak var director: UILabel!
+    @IBOutlet weak var directorLabel: UILabel!
     
     var film : Film?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        filmTitle.text = film?.title
-        rating.text = String(film?.rating ?? 0.0)
-        image.image = film?.image
-        genre.text = film?.genre.rawValue
-        annotation.text = film?.annotation
-        director.text = film?.director
+        
+        filmTitleLabel.text = film?.title
+        ratingLabel.text = String(film?.rating ?? 0.0)
+        imageView.image = film?.image
+        genreLabel.text = film?.genre.rawValue
+        annotationLabel.text = film?.annotation
+        directorLabel.text = film?.director
         
         setRatingColor(rate: film?.rating ?? 0.0)
     }
     
     func setRatingColor(rate: Double){
         
-        if rate <= 4{
-            rating.textColor = UIColor.red
+        if rate <= 4 {
+            ratingLabel.textColor = .red
         }
-        if rate > 4 && rate <= 7{
-            rating.textColor = UIColor.orange
+        if rate > 4 && rate <= 7 {
+            ratingLabel.textColor = .orange
         }
         if rate > 7 {
-            rating.textColor = UIColor.green
+            ratingLabel.textColor = .green
         }
     }
     

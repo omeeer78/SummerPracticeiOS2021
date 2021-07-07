@@ -9,28 +9,16 @@ import UIKit
 
 class CheckListViewCell: UITableViewCell {
     
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var directorLabel: UILabel!
+    @IBOutlet weak var genreLabel: UILabel!
+    @IBOutlet weak var addingDateLabel: UILabel!
     
-    @IBOutlet weak var title: UILabel!
-    @IBOutlet weak var director: UILabel!
-    @IBOutlet weak var genre: UILabel!
-    @IBOutlet weak var addingDate: UILabel!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
-    }
-    
-    func setData(_ checklistCell: ChecklistCell) {
-        title.text = checklistCell.film.title
-        director.text = checklistCell.film.director
-        genre.text = checklistCell.film.genre.rawValue
-        addingDate.text = DateFormatter().string(from:checklistCell.addingDate)
+    func setData(_ checklistCell: ChecklistCellModel) {
+        titleLabel.text = checklistCell.film.title
+        directorLabel.text = checklistCell.film.director
+        genreLabel.text = checklistCell.film.genre.rawValue
+        addingDateLabel.text = DateFormatter().string(from:checklistCell.addingDate)
     }
     
 }
