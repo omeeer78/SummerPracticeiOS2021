@@ -1,7 +1,6 @@
-
 import UIKit
 
-struct ChecklistCell {
+struct ChecklistCellModel {
     
     let film: Film
     let addingDate: Date
