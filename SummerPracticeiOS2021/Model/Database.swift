@@ -75,7 +75,7 @@ class Database {
 
 var data = Database()
 
-//var actions: [User : [Action]] = [:]
+var actions: [User : [Action]] = [:]
 
 enum ActionType: String {
     case sharing = "рекомендует Вам посмотреть фильм"
