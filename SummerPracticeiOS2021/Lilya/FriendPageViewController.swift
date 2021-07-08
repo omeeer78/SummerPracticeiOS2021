@@ -12,7 +12,7 @@ class FriendPageViewController: UIViewController {
     @IBOutlet weak var avaImage: UIImageView!
     @IBOutlet weak var nickname: UILabel!
     @IBOutlet weak var favGenre: UILabel!
-    @IBOutlet weak var friendsGrid: UILabel!
+    @IBOutlet weak var friendsCell: UIButton!
     
     @IBOutlet weak var watchedLabel: UILabel!
     @IBOutlet weak var watchingLabel: UILabel!
@@ -22,10 +22,15 @@ class FriendPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        friendsGrid.text = "Друзья " + friends.name + "'s"
-        watchedLabel.text = "66"
-        watchingLabel.text = "100"
-        wantwatchLabel.text = "45"
+        friendsCell.setTitle("Друзья " + friends.name + "'s", for: .normal)
+        let a: String = String(Status.completed.rawValue)
+        let b: String = String(Status.watching.rawValue)
+        let c: String = String(Status.wantToWatch.rawValue)
+        watchedLabel.text = a
+        watchingLabel.text = b
+        wantwatchLabel.text = c
+        watchingLabel.text = b
+        wantwatchLabel.text = c
         avaImage.image = friends.image
         nickname.text = friends.name
         var genre = "всё"
@@ -42,7 +47,6 @@ class FriendPageViewController: UIViewController {
             genre = "триллеры"
         }
         favGenre.text = genre
-
     }
     
     @IBAction func watchedButtonFuction(_ sender: Any) {
@@ -56,14 +60,8 @@ class FriendPageViewController: UIViewController {
     @IBAction func wantToWatchButtonFuction(_ sender: Any) {
      
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func friendsCellButton(_ sender: Any) {
+        guard let friendCellViewController = storyboard?.instantiateViewController(identifier: "FriendsListViewController") as? FriendsListViewController else { return }
+        present(friendCellViewController, animated: true)
     }
-    */
-
 }
