@@ -11,15 +11,20 @@ class AlinaViewController: UIViewController {
     
     @IBOutlet weak var newsUITableView: UITableView!
     
+    override func viewWillAppear(_ animated: Bool) {
+        let test = Database()
+        actions.append(Action(friend: test.users[1], recommendedFilm: test.films[1], actionType: ActionType.haveWatched))
+        actions.append(Action(friend: test.users[2], recommendedFilm: test.films[3], actionType: ActionType.sharing))
+        actions.append(Action(friend: test.users[3], recommendedFilm: test.films[7], actionType: ActionType.sharing))
+        actions.append(Action(friend: test.users[4], recommendedFilm: test.films[0], actionType: ActionType.sharing))
+    }
+    
     var actions: [Action] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let test = Database()
-        actions.append(Action(user: test.users[0], friend: test.users[2], recommendedFilm: test.films[3]))
-        actions.append(Action(user: test.users[0], friend: test.users[3], recommendedFilm: test.films[7]))
-        actions.append(Action(user: test.users[0], friend: test.users[4], recommendedFilm: test.films[0]))
+        
         newsUITableView.dataSource = self
         newsUITableView.delegate = self
     }
@@ -34,8 +39,7 @@ extension AlinaViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ShareNewsUITableViewCell", for: indexPath) as? ShareNewsUITableViewCell else {
             return UITableViewCell()
         }
-        cell.setData(film: actions[indexPath.row].recommendedFilm,
-                     friend: actions[indexPath.row].friend)
+        cell.setData(action: actions[indexPath.row])
         return cell
     }
 }
@@ -55,12 +59,4 @@ extension AlinaViewController: UITableViewDelegate {
         filmViewController.film = actions[indexPath.row].recommendedFilm
         present(filmViewController, animated: true)
     }
-}
-
-
-
-struct Action {
-    var user: User
-    var friend: User
-    var recommendedFilm: Film
 }

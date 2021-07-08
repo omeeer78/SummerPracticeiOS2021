@@ -21,12 +21,12 @@ class ShareNewsUITableViewCell: UITableViewCell {
         // Initialization code
     }
     
-    func setData(film: Film, friend: User){
-        friendNameLabel.text = friend.name
-        recomendationLabel.text = "рекомендует Вам посмотреть фильм"
-        filmTitleLabel.text = film.title
-        filmDescriptionTextView.text = film.annotation
-        friendImageView.image = friend.image
-        filmImageView.image = film.image
+    func setData(action: Action){
+        friendNameLabel.text = action.friend.name
+        recomendationLabel.text = action.actionType.rawValue //"рекомендует Вам посмотреть фильм"
+        filmTitleLabel.text = action.recommendedFilm.title
+        filmDescriptionTextView.text = action.recommendedFilm.annotation
+        friendImageView.image = action.friend.image
+        filmImageView.image = action.recommendedFilm.image
     }
 }

@@ -75,3 +75,15 @@ class Database {
 
 var data = Database()
 
+//var actions: [User : [Action]] = [:]
+
+enum ActionType: String {
+    case sharing = "рекомендует Вам посмотреть фильм"
+    case haveWatched = "посмотрел фильм"
+}
+
+struct Action {
+    var friend: User
+    var recommendedFilm: Film
+    var actionType: ActionType
+}
