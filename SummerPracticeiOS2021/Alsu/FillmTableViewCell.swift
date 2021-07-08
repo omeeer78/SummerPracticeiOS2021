@@ -13,11 +13,6 @@ class FilmTableViewCell: UITableViewCell {
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var annotationTextView: UITextView!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-    }
-    
     func setData (film: Film) {
         titleLabel.text = film.title
         imageImageView.image = film.image

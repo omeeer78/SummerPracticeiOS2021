@@ -68,6 +68,12 @@ extension AlsuViewController: UITableViewDelegate {
 // MARK: Search Configurations
 
 extension AlsuViewController: UISearchResultsUpdating {
+    
+    var searchBarIsEmpty: Bool {
+        guard let text = searchController.searchBar.text else { return false }
+        return text.isEmpty
+    }
+    
     func updateSearchResults(for searchController: UISearchController) {
         filterContentForSearchText(searchController.searchBar.text!)
     }
@@ -78,7 +84,7 @@ extension AlsuViewController: UISearchResultsUpdating {
             filteredFilms = films
         } else {
             for film in films {
-                if film.title.lowercased().contains(searchText.lowercased()) || film.director.lowercased().contains(searchText.lowercased()) {
+                if film.title.lowercased().contains(searchText.lowercased()) || film.director.lowercased().contains(searchText.lowercased()) && !searchBarIsEmpty {
                     filteredFilms.append(film)
                 }
             }
