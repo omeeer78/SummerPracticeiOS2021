@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="orL-TR-K6p">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="orL-TR-K6p">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -49,28 +49,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FQF-V8-9d7">
-                                <rect key="frame" x="20" y="577" width="374" height="236"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Qnw-ew-0cd">
-                                        <rect key="frame" x="0.0" y="28" width="374" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qnw-ew-0cd" id="N6q-Pb-Cy1">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Список друзей:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="55M-Dr-pG0">
-                                <rect key="frame" x="145" y="548" width="125" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ХОЧУ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Cx-Uo-7tu">
                                 <rect key="frame" x="30" y="407" width="75" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -97,7 +75,6 @@
                                 </state>
                                 <connections>
                                     <action selector="goToWatchListButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="hfb-VA-jaK"/>
-
                                 </connections>
                             </button>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="УЖЕ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nw4-m3-TXX">
@@ -125,7 +102,6 @@
                                 </state>
                                 <connections>
                                     <action selector="goToAlreadyWatchedButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ZDY-tP-adg"/>
-
                                 </connections>
                             </button>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="СЕЙЧАС" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nm-uU-myM">
@@ -153,7 +129,15 @@
                                 </state>
                                 <connections>
                                     <action selector="goToNowWatchingButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="uSC-5Y-IM4"/>
-
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w8u-vg-09o">
+                                <rect key="frame" x="142" y="748" width="120" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="Друзей: 8"/>
+                                <connections>
+                                    <action selector="goToFriendsButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="lZ9-7B-9AB"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -170,7 +154,6 @@
                         <barButtonItem key="rightBarButtonItem" title="Item" image="square.and.pencil" catalog="system" id="1kh-Lq-4Sw">
                             <connections>
                                 <action selector="editProfileButtonItem:" destination="Y6W-OH-hqX" id="1vj-Nf-tui"/>
-
                                 <segue destination="Bhv-wj-t0Y" kind="show" id="QRD-MZ-H6R"/>
                             </connections>
                         </barButtonItem>
@@ -179,11 +162,11 @@
                     <connections>
                         <outlet property="alreadyWatchedButton" destination="5jO-Qs-0mA" id="QeU-8p-DlA"/>
                         <outlet property="favoriteGenreLabel" destination="QOE-91-E0L" id="LS5-k5-iXu"/>
+                        <outlet property="friendsButton" destination="w8u-vg-09o" id="d6w-AY-5dP"/>
                         <outlet property="imageImageView" destination="EVp-ld-b2i" id="Ma7-na-9tc"/>
                         <outlet property="nicknameLabel" destination="5oS-Kt-tpm" id="RN0-de-fHH"/>
                         <outlet property="nowWatchingButton" destination="f9M-e1-lHh" id="rAf-Si-0Fg"/>
                         <outlet property="wantToWatchButton" destination="IVp-f5-wxw" id="xXF-rz-4qC"/>
-
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -215,7 +198,6 @@
                                 </state>
                                 <connections>
                                     <action selector="resetButton:" destination="Bhv-wj-t0Y" eventType="touchUpInside" id="HV4-ZE-Ud4"/>
-
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Новый никнейм" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ios-Ov-OGp">
@@ -252,13 +234,15 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="NRy-El-cmn" appends="YES" id="Mhu-qa-48A"/>
-
                                 </connections>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pencil.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="GaX-15-d2a">
-                                <rect key="frame" x="253" y="111.5" width="30" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="тапните, чтобы изменить" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RoP-vg-hJI">
+                                <rect key="frame" x="105" y="252" width="202" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Mbe-rb-K35"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -274,7 +258,6 @@
                         <outlet property="genrePickerView" destination="gyG-ca-A11" id="Qg8-dB-Z95"/>
                         <outlet property="imageImageView" destination="Swh-oZ-8hS" id="fZu-aQ-pHK"/>
                         <outlet property="nicknameTextField" destination="ios-Ov-OGp" id="J6Y-GR-3Kl"/>
-
                         <outlet property="resetButton" destination="f8J-K6-6du" id="lSb-w0-eu8"/>
                         <outlet property="saveButton" destination="9xD-Id-CNi" id="Kp9-hl-wrm"/>
                     </connections>
@@ -288,11 +271,11 @@
             </objects>
             <point key="canvasLocation" x="1814.4927536231885" y="139.95535714285714"/>
         </scene>
-        <!--Rustem-->
+        <!--Профиль-->
         <scene sceneID="OXs-YH-nya">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="orL-TR-K6p" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Rustem" id="zrH-og-4RM"/>
+                    <tabBarItem key="tabBarItem" title="Профиль" image="person" catalog="system" id="zrH-og-4RM"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8Jj-Tq-N3a">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -309,7 +292,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="pencil.circle" catalog="system" width="128" height="121"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="square.and.pencil" catalog="system" width="128" height="115"/>
         <systemColor name="labelColor">

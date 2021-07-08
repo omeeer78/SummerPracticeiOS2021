@@ -28,7 +28,6 @@ class EditViewController: UIViewController {
     }
     
     @IBAction func changeImageButton(_ sender: Any){
-        print("Hi")
         imageImageView.image = imageImageView.highlightedImage
         imageImageView.image = imageImageView.image
     }

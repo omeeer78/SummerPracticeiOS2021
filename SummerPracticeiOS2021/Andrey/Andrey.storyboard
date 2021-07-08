@@ -1,31 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hNV-kp-ydy">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="1cY-FD-NLO">
+            <objects>
+                <navigationController id="hNV-kp-ydy" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qrG-Sp-Qpy">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="W5R-YY-8I3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mxa-yq-avO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1242" y="130"/>
+        </scene>
         <!--Чеклист-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="ChecklistViewController" customModule="SummerPracticeiOS2021" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChecklistViewController" id="Y6W-OH-hqX" customClass="ChecklistViewController" customModule="SummerPracticeiOS2021" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OhJ-Rv-PZf">
-                                <rect key="frame" x="0.0" y="121" width="414" height="692"/>
+                                <rect key="frame" x="0.0" y="126" width="414" height="687"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CheckListViewCell" rowHeight="86" id="IUl-SP-Qqr" customClass="CheckListViewCell" customModule="SummerPracticeiOS2021" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="86"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="86"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IUl-SP-Qqr" id="Krz-CO-s3o">
-                                            <rect key="frame" x="0.0" y="0.0" width="383" height="86"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="384.5" height="86"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RKd-Yw-v8y">
@@ -65,8 +81,15 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lrP-WE-yLS">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Чеклист" id="gJe-Aa-b6Z"/>
+                                </items>
+                            </navigationBar>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="25N-w8-OXc">
-                                <rect key="frame" x="0.0" y="82" width="414" height="32"/>
+                                <rect key="frame" x="0.0" y="91" width="414" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="Хочу посмотреть"/>
@@ -77,21 +100,16 @@
                                     <action selector="changeChecklistPage:" destination="Y6W-OH-hqX" eventType="valueChanged" id="8zx-Fc-vwo"/>
                                 </connections>
                             </segmentedControl>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lrP-WE-yLS">
-                                <rect key="frame" x="0.0" y="38" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Чеклист" id="gJe-Aa-b6Z"/>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Чеклист" image="checkmark.square" catalog="system" id="NdC-Cb-5eg"/>
+                    <navigationItem key="navigationItem" title="Чеклист" id="yP5-XT-Zac"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="tableView" destination="OhJ-Rv-PZf" id="irx-3K-Yfs"/>
+                        <outlet property="segmentedControll" destination="25N-w8-OXc" id="u9Z-LH-2gm"/>
+                        <outlet property="tableView" destination="OhJ-Rv-PZf" id="FBC-Eh-YSV"/>
                         <segue destination="tEC-Og-DPr" kind="presentation" identifier="showFilm" id="2Py-oY-mxV"/>
                     </connections>
                 </viewController>

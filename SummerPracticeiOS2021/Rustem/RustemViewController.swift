@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol NeededCheckListStatusDelegate: AnyObject {
+    func openPage(page: Int)
+}
+
 class RustemViewController: UIViewController {
     
     @IBOutlet weak var nicknameLabel: UILabel!
@@ -15,6 +19,8 @@ class RustemViewController: UIViewController {
     @IBOutlet weak var alreadyWatchedButton: UIButton!
     @IBOutlet weak var nowWatchingButton: UIButton!
     @IBOutlet weak var favoriteGenreLabel: UILabel!
+    @IBOutlet weak var friendsButton: UIButton!
+    weak var delegate: NeededCheckListStatusDelegate?
     
     
     override func viewDidLoad() {
@@ -56,14 +62,31 @@ class RustemViewController: UIViewController {
     }
     
     @IBAction func goToWatchListButton(_ sender: UIButton) {
-        guard let watchList = storyboard?.instantiateViewController(withIdentifier: "EditViewController") else { return }
-        navigationController?.pushViewController(watchList, animated: true)
+        let watchlist = UIStoryboard(name: "Andrey", bundle: nil)
+        guard let watchlistVC = watchlist.instantiateViewController(identifier: "ChecklistViewController") as? ChecklistViewController else { return }
+        navigationController?.pushViewController(watchlistVC, animated: true)
     }
     
     @IBAction func goToAlreadyWatchedButton(_ sender: UIButton) {
+        let alreadyWatched = UIStoryboard(name: "Andrey", bundle: nil)
+       guard let alreadyWatchedVC = alreadyWatched.instantiateViewController(identifier: "ChecklistViewController") as? ChecklistViewController else { return }
+        delegate = alreadyWatchedVC
+        delegate?.openPage(page: 2)
+        navigationController?.pushViewController(alreadyWatchedVC, animated: true)
+        
     }
     
     @IBAction func goToNowWatchingButton(_ sender: UIButton) {
+        let nowWatching = UIStoryboard(name: "Andrey", bundle: nil)
+        guard let nowWatchingVC = nowWatching.instantiateViewController(withIdentifier: "ChecklistViewController") as? ChecklistViewController else { return }
+        delegate = nowWatchingVC
+        delegate?.openPage(page: 1)
+        navigationController?.pushViewController(nowWatchingVC, animated: true)
+        //nowWatchingVC.openChecklistPage(2)
+    }
+    
+    @IBAction func goToFriendsButton(_ sender: UIButton) {
+        
     }
     
 }
