@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AlsuViewController: UIViewController, UITableViewDataSource {
+class AlsuViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -28,11 +28,16 @@ class AlsuViewController: UIViewController, UITableViewDataSource {
         
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search"
+        searchController.searchBar.placeholder = "Введите название или режиссера"
         navigationItem.searchController = searchController
         definesPresentationContext = true
         
     }
+}
+
+// MARK: DataSource
+
+extension AlsuViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             return filteredFilms.count
@@ -46,8 +51,9 @@ class AlsuViewController: UIViewController, UITableViewDataSource {
     }
 }
 
-extension AlsuViewController:UITableViewDelegate {
-    
+// MARK: Delegate
+
+extension AlsuViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
@@ -61,7 +67,7 @@ extension AlsuViewController:UITableViewDelegate {
 
 // MARK: Search Configurations
 
-extension AlsuViewController:UISearchResultsUpdating {
+extension AlsuViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         filterContentForSearchText(searchController.searchBar.text!)
     }
@@ -72,7 +78,7 @@ extension AlsuViewController:UISearchResultsUpdating {
             filteredFilms = films
         } else {
             for film in films {
-                if film.title.lowercased().contains(searchText.lowercased()){
+                if film.title.lowercased().contains(searchText.lowercased()) || film.director.lowercased().contains(searchText.lowercased()) {
                     filteredFilms.append(film)
                 }
             }
