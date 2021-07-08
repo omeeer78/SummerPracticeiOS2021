@@ -24,6 +24,7 @@ class Database {
                          User(name: "kemal645", image: UIImage(named: "papich") ?? UIImage(), favoriteGenre: Genre.action, password: "000", friends: [], checklist: []),
                          User(name: "devilish_smile", image: UIImage(named: "pink") ?? UIImage(), favoriteGenre: Genre.drama, password: "666", friends: [], checklist: []),
                          User(name: "primetime11", image: UIImage(named: "guf") ?? UIImage(), favoriteGenre: Genre.thriller, password: "111", friends: [], checklist: [])]
+    
     var films: [Film] = [Film(title: "Побег из Шоушенка", director: "Фрэнк Дарабонт", annotation: "Выдающаяся драма о силе таланта, важности дружбы,                       стремлении к свободе и Рите Хэйворт", image: UIImage(named: "Shawshenk") ?? UIImage(), rating: 8.9, genre: Genre.drama),
                          Film(title: "Чёрная роза", director: "Александр Невский", annotation: "Майор московской полиции отправляется в Лос-Анджелес для помощи в расследовании серии убийств русских эмигрантов.", image: UIImage(named: "black rose") ?? UIImage(), rating: 1.5, genre: Genre.action),
                          Film(title: "Интерстеллар", director: "Кристофер Нолан", annotation: "Фантастический эпос про задыхающуюся Землю, космические полеты и парадоксы времени.", image: UIImage(named: "interstellar") ?? UIImage(), rating: 8.6, genre: Genre.drama),
@@ -81,11 +82,16 @@ class Database {
     
     func updateFilmCheckListStatus(film: Film, newStatus:Status){
         
-        guard let index = users[0].checklist.firstIndex(where: { $0.film.title == film.title }) else { return }
-        
+        guard let index = users[0].checklist.firstIndex(where: { $0.film.title == film.title }) else {
+            
+            let newChecklistModel = ChecklistCellModel(film: film, addingDate: Date(), status: newStatus)
+            users[0].checklist.append(newChecklistModel)
+            return }
         let newChecklistModel = ChecklistCellModel(film: film, addingDate: users[0].checklist[index].addingDate, status: newStatus)
         users[0].checklist[index] = newChecklistModel
     }
+    
+    
 }
 
 var data = Database()
