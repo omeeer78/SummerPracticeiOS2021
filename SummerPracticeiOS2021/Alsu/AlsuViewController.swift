@@ -61,7 +61,7 @@ extension AlsuViewController: UITableViewDelegate {
         guard let filmViewController = filmStoryboard.instantiateViewController(identifier: "FilmViewController") as? FilmViewController else { return }
         
         filmViewController.film = filteredFilms[indexPath.row]
-        navigationController?.pushViewController(filmViewController, animated: true)
+        present(filmViewController, animated: true, completion: nil)
     }
 }
 
