@@ -67,12 +67,12 @@ class Database {
                          Film(title: "007: Не время умирать", director: "Кэри Дзёдзи Фуканага", annotation: "Бонд попадает в ловушку к таинственному злодею, вооруженному опасным технологическим оружием.", image: UIImage(named: "no time") ?? UIImage(), rating: 7.5, genre: Genre.action)]
     
     func addFriends() {
-        presentUser.friends = [users[1], users[2], users[3], users[4], users[5], users[6], users[7], users[8], users[9]]
+        users[0].friends = [users[1], users[2], users[3], users[4], users[5], users[6], users[7], users[8], users[9]]
     }
     
     
     func addChecklist(){
-        presentUser.checklist = [ChecklistCellModel(film: films[0], addingDate: Date(), status: Status.wantToWatch),
+        users[0].checklist = [ChecklistCellModel(film: films[0], addingDate: Date(), status: Status.wantToWatch),
                                  ChecklistCellModel(film: films[9], addingDate: Date(), status: Status.completed),
                                  ChecklistCellModel(film: films[2], addingDate: Date(), status: Status.watching),
                                  ChecklistCellModel(film: films[3], addingDate: Date(), status: Status.completed),
@@ -86,10 +86,12 @@ class Database {
     }
     
     func addActions() {
-        actions[presentUser] = [(Action(friend: users[1], film: films[2], actionType: ActionType.haveWatched)),
+        actions[users[0]] = [(Action(friend: users[1], film: films[2], actionType: ActionType.haveWatched)),
                                 (Action(friend: users[2], film: films[4], actionType: ActionType.sharing)),
                                 (Action(friend: users[3], film: films[6], actionType: ActionType.sharing)),
                                 (Action(friend: users[4], film: films[9], actionType: ActionType.sharing))]
+        
+        actions[users[2]] = [(Action(friend: users[2], film: films[4], actionType: ActionType.sharing))]
     }
     
     func updateFilmCheckListStatus(film: Film, newStatus:Status){
@@ -104,7 +106,12 @@ class Database {
     }
     
     func actionHappened(friend: User, film: Film, type:ActionType) {
-        actions[friend]?.append(Action(friend: presentUser, film: film, actionType: type))
+        if actions.keys.contains(friend) {
+            actions[friend]?.append(Action(friend: presentUser, film: film, actionType: type))
+        }
+        else {
+            actions[friend] = [Action(friend: presentUser, film: film, actionType: type)]
+        }
     }
     
 }

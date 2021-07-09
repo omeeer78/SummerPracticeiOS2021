@@ -150,6 +150,7 @@
         <!--Navigation Controller-->
         <scene sceneID="z8Q-Xl-DrQ">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D0K-wl-YE9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="JTr-z6-1YB" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Yx9-gd-H10">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -159,7 +160,6 @@
                         <segue destination="Fok-Pk-gfT" kind="relationship" relationship="rootViewController" id="Ajo-Ka-Dms"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="D0K-wl-YE9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-358" y="7"/>
         </scene>
