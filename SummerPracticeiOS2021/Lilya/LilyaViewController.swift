@@ -1,29 +1,48 @@
 //
-//  LilyaViewController.swift
-//  SummerPracticeiOS2021
+//  FriendsViewController.swift
+//  FriendsByLilya
 //
-//  Created by Марданов Амир on 03.07.2021.
+//  Created by itisioslab on 06.07.2021.
 //
 
 import UIKit
 
-class LilyaViewController: UIViewController {
 
+class LilyaViewController: UIViewController {
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        tableView.delegate = self
+        tableView.dataSource = self
     }
     
+    
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension LilyaViewController: UITableViewDelegate{
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        96
     }
-    */
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        guard let friendPageViewController = storyboard?.instantiateViewController(identifier: "FriendPageViewController") as? FriendPageViewController else { return }
+        friendPageViewController.friend = data.presentUser.friends[indexPath.row]
+        navigationController?.pushViewController(friendPageViewController, animated: true)
+    }
+}
+
+extension LilyaViewController: UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        data.presentUser.friends.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "BigFriendsTableViewCell", for: indexPath) as? BigFriendsTableViewCell else { return UITableViewCell() }
+        cell.setData(friend: data.presentUser.friends[indexPath.row])
+        return cell
+
+    }
 }

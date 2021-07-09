@@ -8,15 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		141EF8B42695F5E200EDE442 /* FillmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141EF8B32695F5E200EDE442 /* FillmTableViewCell.swift */; };
+		2344DE1426946C9400408540 /* BigFriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2344DE1326946C9400408540 /* BigFriendsTableViewCell.swift */; };
+		2344DE18269475FA00408540 /* FriendPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2344DE17269475FA00408540 /* FriendPageViewController.swift */; };
 		236FA3892694764900C982F3 /* Film.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 236FA3882694764900C982F3 /* Film.storyboard */; };
 		2387FAAC26985BBF00D4ABA9 /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2387FAAB26985BBF00D4ABA9 /* RecommendViewController.swift */; };
 		2387FAAF26985C2500D4ABA9 /* RecommendViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2387FAAE26985C2500D4ABA9 /* RecommendViewCell.swift */; };
-		2387FAB2269869C500D4ABA9 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2387FAB1269869C500D4ABA9 /* Action.swift */; };
 		23C898DD2695D4A900125489 /* CheckListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C898DC2695D4A900125489 /* CheckListViewCell.swift */; };
 		23C898DF2695D4BE00125489 /* FilmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CBC62A26935DDA003DACDF /* FilmViewController.swift */; };
 		23CBC61E269349CF003DACDF /* ChecklistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CBC61D269349CF003DACDF /* ChecklistCell.swift */; };
 		23CBC6242693503A003DACDF /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CBC6232693503A003DACDF /* Database.swift */; };
 		23CBC627269352F1003DACDF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CBC626269352F1003DACDF /* User.swift */; };
+		23DBDBFC2698823200CD3646 /* FilmRecsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DBDBFB2698823200CD3646 /* FilmRecsTableViewCell.swift */; };
 		46A7E8D6269469A500BD6169 /* Rustem.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46A7E8D5269469A500BD6169 /* Rustem.storyboard */; };
 		46C2150A26933FB6007AE61D /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C2150926933FB6007AE61D /* EditViewController.swift */; };
 		7CCC8C732694758100ACCA59 /* ShareNewsUITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCC8C722694758100ACCA59 /* ShareNewsUITableViewCell.swift */; };
@@ -41,16 +43,17 @@
 
 /* Begin PBXFileReference section */
 		141EF8B32695F5E200EDE442 /* FillmTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillmTableViewCell.swift; sourceTree = "<group>"; };
+		2344DE1326946C9400408540 /* BigFriendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigFriendsTableViewCell.swift; sourceTree = "<group>"; };
+		2344DE17269475FA00408540 /* FriendPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendPageViewController.swift; sourceTree = "<group>"; };
 		236FA3882694764900C982F3 /* Film.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Film.storyboard; sourceTree = "<group>"; };
 		2387FAAB26985BBF00D4ABA9 /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		2387FAAE26985C2500D4ABA9 /* RecommendViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewCell.swift; sourceTree = "<group>"; };
-		2387FAB1269869C500D4ABA9 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
-		
 		23C898DC2695D4A900125489 /* CheckListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckListViewCell.swift; sourceTree = "<group>"; };
 		23CBC61D269349CF003DACDF /* ChecklistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistCell.swift; sourceTree = "<group>"; };
 		23CBC6232693503A003DACDF /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		23CBC626269352F1003DACDF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		23CBC62A26935DDA003DACDF /* FilmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmViewController.swift; sourceTree = "<group>"; };
+		23DBDBFB2698823200CD3646 /* FilmRecsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmRecsTableViewCell.swift; sourceTree = "<group>"; };
 		46A7E8D5269469A500BD6169 /* Rustem.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Rustem.storyboard; sourceTree = "<group>"; };
 		46C2150926933FB6007AE61D /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		7CCC8C722694758100ACCA59 /* ShareNewsUITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareNewsUITableViewCell.swift; sourceTree = "<group>"; };
@@ -148,7 +151,10 @@
 			isa = PBXGroup;
 			children = (
 				D10F00332690D85C004999B5 /* Lilya.storyboard */,
+				2344DE17269475FA00408540 /* FriendPageViewController.swift */,
 				D10F00412690DC97004999B5 /* LilyaViewController.swift */,
+				2344DE1326946C9400408540 /* BigFriendsTableViewCell.swift */,
+				23DBDBFB2698823200CD3646 /* FilmRecsTableViewCell.swift */,
 			);
 			path = Lilya;
 			sourceTree = "<group>";
@@ -293,9 +299,11 @@
 				D10F003E2690DC8E004999B5 /* AlinaViewController.swift in Sources */,
 				7CCC8C732694758100ACCA59 /* ShareNewsUITableViewCell.swift in Sources */,
 				7CCC8C752694795900ACCA59 /* Film.swift in Sources */,
+				23DBDBFC2698823200CD3646 /* FilmRecsTableViewCell.swift in Sources */,
 				D10F003C2690DC8A004999B5 /* ChecklistViewController.swift in Sources */,
 				D10F003C2690DC8A004999B5 /* ChecklistViewController.swift in Sources */,
 				23CBC61E269349CF003DACDF /* ChecklistCell.swift in Sources */,
+				2344DE1426946C9400408540 /* BigFriendsTableViewCell.swift in Sources */,
 				D10F00172690D729004999B5 /* TabBarController.swift in Sources */,
 				23C898DD2695D4A900125489 /* CheckListViewCell.swift in Sources */,
 				D10F00132690D729004999B5 /* AppDelegate.swift in Sources */,
@@ -304,6 +312,7 @@
 				D10F003A2690DC86004999B5 /* RustemViewController.swift in Sources */,
 				141EF8B42695F5E200EDE442 /* FillmTableViewCell.swift in Sources */,
 				D10F00422690DC97004999B5 /* LilyaViewController.swift in Sources */,
+				2344DE18269475FA00408540 /* FriendPageViewController.swift in Sources */,
 				D10F00152690D729004999B5 /* SceneDelegate.swift in Sources */,
 				46C2150A26933FB6007AE61D /* EditViewController.swift in Sources */,
 				2387FAAF26985C2500D4ABA9 /* RecommendViewCell.swift in Sources */,
@@ -456,7 +465,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SummerPracticeiOS2021/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -475,7 +484,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SummerPracticeiOS2021/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
