@@ -1,12 +1,15 @@
 
 import UIKit
+import PhotosUI
 
-class EditViewController: UIViewController {
+class EditViewController: UIViewController, PHPickerViewControllerDelegate {
+    
     @IBOutlet weak var nicknameTextField: UITextField!
     @IBOutlet weak var genrePickerView: UIPickerView!
     @IBOutlet weak var resetButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var imageImageView: UIImageView!
+    weak var newImage: UIImage? = data.users[0].image
     
     
     
@@ -22,14 +25,43 @@ class EditViewController: UIViewController {
         genrePickerView.dataSource = self
         genrePickerView.delegate = self
         nicknameTextField.text = data.users[0].name
-        genrePickerView.selectRow(favoGenreId(), inComponent: 0, animated: true)
         imageImageView.image = data.users[0].image
+        genrePickerView.selectRow(favoGenreId(), inComponent: 0, animated: true)
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        imageImageView.image = newImage
+
+    }
+    
     @IBAction func changeImageButton(_ sender: Any){
-        imageImageView.image = imageImageView.highlightedImage
-        imageImageView.image = imageImageView.image
+        var configure: PHPickerConfiguration = PHPickerConfiguration()
+        configure.filter = .any(of: [.images])
+        configure.selectionLimit = 1
+        let picker: PHPickerViewController = PHPickerViewController(configuration: configure)
+        picker.delegate = self
+        self.present(picker, animated: true, completion: nil)
+    }
+    
+    func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
+        if (!results.isEmpty){
+            results[0].itemProvider.loadObject(ofClass: UIImage.self, completionHandler: {
+            (obj, errors) in
+                if let theImage = obj as? UIImage {
+                    DispatchQueue.main.async {
+                        self.imageImageView.image = theImage
+                        self.newImage = self.imageImageView.image
+                    }
+                }
+            }
+            )
+          
+        }
+        viewWillAppear(true)
+        imageImageView.image = newImage
+        picker.dismiss(animated: true, completion: nil)
+        
     }
     
     @IBAction func resetButton(_ sender: UIButton) {
@@ -40,6 +72,7 @@ class EditViewController: UIViewController {
     @IBAction func saveButton(_ sender: UIButton) {
         let newName = nicknameTextField.text
         data.users[0].name = newName ?? data.users[0].name
+        data.users[0].image = newImage ?? data.users[0].image
         navigationController?.popToRootViewController(animated: true)
     }
 }
@@ -76,4 +109,3 @@ extension UIViewController: UIPickerViewDelegate{
         }
     }
 }
-
