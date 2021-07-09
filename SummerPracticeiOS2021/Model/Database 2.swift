@@ -10,15 +10,9 @@ import UIKit
 class Database {
     
     init() {
-        presentUser = users[0]
         addFriends()
         addChecklist()
-        addActions()
     }
-    
-    var actions: [User : [Action]] = [:]
-    
-    var presentUser: User
     
     var users: [User] = [User(name: "unterlantas", image: #imageLiteral(resourceName: "drag"), favoriteGenre: Genre.thriller, password: "123", friends: [], checklist: []),
                          User(name: "Andrewoch", image: UIImage(named: "durov") ?? UIImage(), favoriteGenre: Genre.horror, password: "432", friends: [], checklist: []),
@@ -67,23 +61,29 @@ class Database {
                          Film(title: "Однажды в Голливуде", director: "Квентин Тарантино", annotation: "Можно ли переписать историю? Самый ностальгический фильм Тарантино — с Шэрон Тейт, Брюсом Ли и Чарли Мэнсоном.", image: UIImage(named: "hollywood") ?? UIImage(), rating: 8.0, genre: Genre.action),
                          Film(title: "007: Не время умирать", director: "Кэри Дзёдзи Фуканага", annotation: "Бонд попадает в ловушку к таинственному злодею, вооруженному опасным технологическим оружием.", image: UIImage(named: "no time") ?? UIImage(), rating: 7.5, genre: Genre.action)]
     
-    func addFriends() {
-        presentUser.friends = [users[1], users[2], users[3], users[4], users[5], users[6], users[7], users[8], users[9]]
+    func addFriends(){
+        users[0].friends = [users[1], users[2], users[3], users[4], users[5], users[6], users[7], users[8], users[9]]
     }
     
-    func addChecklist() {
-        presentUser.checklist = [ChecklistCellModel(film: films[0], addingDate: Date(), status: Status.wantToWatch),
+    func addChecklist(){
+        users[0].checklist = [ChecklistCellModel(film: films[0], addingDate: Date(), status: Status.wantToWatch),
                               ChecklistCellModel(film: films[5], addingDate: Date(), status: Status.completed),
                               ChecklistCellModel(film: films[3], addingDate: Date(), status: Status.wantToWatch)]
         
     }
-    
-    func addActions() {
-        actions[presentUser] = [(Action(friend: users[1], film: films[2], actionType: ActionType.haveWatched)),
-                                (Action(friend: users[2], film: films[4], actionType: ActionType.sharing)),
-                                (Action(friend: users[3], film: films[6], actionType: ActionType.sharing)),
-                                (Action(friend: users[4], film: films[9], actionType: ActionType.sharing))]
-    }
 }
 
 var data = Database()
+
+var actions: [User : [Action]] = [:]
+
+enum ActionType: String {
+    case sharing = "рекомендует Вам посмотреть фильм"
+    case haveWatched = "посмотрел фильм"
+}
+
+struct Action {
+    var friend: User
+    var recommendedFilm: Film
+    var actionType: ActionType
+}
