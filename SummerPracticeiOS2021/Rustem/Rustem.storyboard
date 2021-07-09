@@ -132,9 +132,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w8u-vg-09o">
-                                <rect key="frame" x="142" y="748" width="120" height="45"/>
+                                <rect key="frame" x="154" y="758" width="107" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Друзей: 8"/>
                                 <connections>
                                     <action selector="goToFriendsButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="lZ9-7B-9AB"/>

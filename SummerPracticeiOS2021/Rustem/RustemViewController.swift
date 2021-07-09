@@ -53,6 +53,8 @@ class RustemViewController: UIViewController {
             genre = "триллеры"
         }
         favoriteGenreLabel.text = genre
+        let friendsCount = "Друзей: \(data.users[0].friends.count)"
+        friendsButton.setTitle(String(friendsCount), for: .normal)
     }
     
     
@@ -82,11 +84,13 @@ class RustemViewController: UIViewController {
         delegate = nowWatchingVC
         delegate?.openPage(page: 1)
         navigationController?.pushViewController(nowWatchingVC, animated: true)
-        //nowWatchingVC.openChecklistPage(2)
     }
     
     @IBAction func goToFriendsButton(_ sender: UIButton) {
-        
+//        let friendsList = UIStoryboard(name: "Lilya", bundle: nil)
+//        guard let friendsListVC = friendsList.instantiateViewController(withIdentifier: "LilyaViewController") as? LilyaViewController else { return }
+//        navigationController?.pushViewController(friendsListVC, animated: true)
     }
+        
     
 }
