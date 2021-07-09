@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		141EF8B42695F5E200EDE442 /* FillmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141EF8B32695F5E200EDE442 /* FillmTableViewCell.swift */; };
 		236FA3892694764900C982F3 /* Film.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 236FA3882694764900C982F3 /* Film.storyboard */; };
+		2387FAAC26985BBF00D4ABA9 /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2387FAAB26985BBF00D4ABA9 /* RecommendViewController.swift */; };
+		2387FAAF26985C2500D4ABA9 /* RecommendViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2387FAAE26985C2500D4ABA9 /* RecommendViewCell.swift */; };
+		2387FAB2269869C500D4ABA9 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2387FAB1269869C500D4ABA9 /* Action.swift */; };
 		23C898DD2695D4A900125489 /* CheckListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C898DC2695D4A900125489 /* CheckListViewCell.swift */; };
 		23C898DF2695D4BE00125489 /* FilmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CBC62A26935DDA003DACDF /* FilmViewController.swift */; };
 		23CBC61E269349CF003DACDF /* ChecklistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CBC61D269349CF003DACDF /* ChecklistCell.swift */; };
@@ -39,6 +42,10 @@
 /* Begin PBXFileReference section */
 		141EF8B32695F5E200EDE442 /* FillmTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillmTableViewCell.swift; sourceTree = "<group>"; };
 		236FA3882694764900C982F3 /* Film.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Film.storyboard; sourceTree = "<group>"; };
+		2387FAAB26985BBF00D4ABA9 /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
+		2387FAAE26985C2500D4ABA9 /* RecommendViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewCell.swift; sourceTree = "<group>"; };
+		2387FAB1269869C500D4ABA9 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		
 		23C898DC2695D4A900125489 /* CheckListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckListViewCell.swift; sourceTree = "<group>"; };
 		23CBC61D269349CF003DACDF /* ChecklistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistCell.swift; sourceTree = "<group>"; };
 		23CBC6232693503A003DACDF /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
@@ -95,6 +102,8 @@
 				23CBC626269352F1003DACDF /* User.swift */,
 				236FA3882694764900C982F3 /* Film.storyboard */,
 				23CBC62A26935DDA003DACDF /* FilmViewController.swift */,
+				2387FAAB26985BBF00D4ABA9 /* RecommendViewController.swift */,
+				2387FAAE26985C2500D4ABA9 /* RecommendViewCell.swift */,
 				7CCC8C7A2698527700ACCA59 /* Action.swift */,
 			);
 			path = Model;
@@ -279,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				23CBC627269352F1003DACDF /* User.swift in Sources */,
+				2387FAAC26985BBF00D4ABA9 /* RecommendViewController.swift in Sources */,
 				7CCC8C7B2698527700ACCA59 /* Action.swift in Sources */,
 				D10F003E2690DC8E004999B5 /* AlinaViewController.swift in Sources */,
 				7CCC8C732694758100ACCA59 /* ShareNewsUITableViewCell.swift in Sources */,
@@ -296,6 +306,7 @@
 				D10F00422690DC97004999B5 /* LilyaViewController.swift in Sources */,
 				D10F00152690D729004999B5 /* SceneDelegate.swift in Sources */,
 				46C2150A26933FB6007AE61D /* EditViewController.swift in Sources */,
+				2387FAAF26985C2500D4ABA9 /* RecommendViewCell.swift in Sources */,
 				23C898DF2695D4BE00125489 /* FilmViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
