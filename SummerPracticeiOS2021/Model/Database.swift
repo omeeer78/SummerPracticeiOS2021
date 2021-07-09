@@ -10,7 +10,7 @@ import UIKit
 class Database {
     
     init() {
-        presentUseer = users[0]
+        presentUser = users[0]
         addFriends()
         addChecklist()
         addActions()
@@ -18,7 +18,7 @@ class Database {
     
     var actions: [User : [Action]] = [:]
     
-    var presentUseer: User
+    var presentUser: User
     
     var users: [User] = [User(name: "unterlantas", image: #imageLiteral(resourceName: "drag"), favoriteGenre: Genre.thriller, password: "123", friends: [], checklist: []),
                          User(name: "Andrewoch", image: UIImage(named: "durov") ?? UIImage(), favoriteGenre: Genre.horror, password: "432", friends: [], checklist: []),
@@ -68,21 +68,21 @@ class Database {
                          Film(title: "007: Не время умирать", director: "Кэри Дзёдзи Фуканага", annotation: "Бонд попадает в ловушку к таинственному злодею, вооруженному опасным технологическим оружием.", image: UIImage(named: "no time") ?? UIImage(), rating: 7.5, genre: Genre.action)]
     
     func addFriends() {
-        presentUseer.friends = [users[1], users[2], users[3], users[4], users[5], users[6], users[7], users[8], users[9]]
+        presentUser.friends = [users[1], users[2], users[3], users[4], users[5], users[6], users[7], users[8], users[9]]
     }
     
     func addChecklist() {
-        presentUseer.checklist = [ChecklistCellModel(film: films[0], addingDate: Date(), status: Status.wantToWatch),
+        presentUser.checklist = [ChecklistCellModel(film: films[0], addingDate: Date(), status: Status.wantToWatch),
                               ChecklistCellModel(film: films[5], addingDate: Date(), status: Status.completed),
                               ChecklistCellModel(film: films[3], addingDate: Date(), status: Status.wantToWatch)]
         
     }
     
     func addActions() {
-        actions[presentUseer] = [(Action(friend: users[1], recommendedFilm: films[2], actionType: ActionType.haveWatched)),
-                                (Action(friend: users[2], recommendedFilm: films[4], actionType: ActionType.sharing)),
-                                (Action(friend: users[3], recommendedFilm: films[6], actionType: ActionType.sharing)),
-                                (Action(friend: users[4], recommendedFilm: films[9], actionType: ActionType.sharing))]
+        actions[presentUser] = [(Action(friend: users[1], film: films[2], actionType: ActionType.haveWatched)),
+                                (Action(friend: users[2], film: films[4], actionType: ActionType.sharing)),
+                                (Action(friend: users[3], film: films[6], actionType: ActionType.sharing)),
+                                (Action(friend: users[4], film: films[9], actionType: ActionType.sharing))]
     }
 }
 

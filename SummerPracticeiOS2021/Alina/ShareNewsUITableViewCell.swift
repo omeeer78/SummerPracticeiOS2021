@@ -16,17 +16,12 @@ class ShareNewsUITableViewCell: UITableViewCell {
     @IBOutlet weak var friendImageView: UIImageView!
     @IBOutlet weak var filmImageView: UIImageView!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-    
     func setData(action: Action){
         friendNameLabel.text = action.friend.name
         recomendationLabel.text = action.actionType.rawValue //"рекомендует Вам посмотреть фильм"
-        filmTitleLabel.text = action.recommendedFilm.title
-        filmDescriptionTextView.text = action.recommendedFilm.annotation
+        filmTitleLabel.text = action.film.title
+        filmDescriptionTextView.text = action.film.annotation
         friendImageView.image = action.friend.image
-        filmImageView.image = action.recommendedFilm.image
+        filmImageView.image = action.film.image
     }
 }

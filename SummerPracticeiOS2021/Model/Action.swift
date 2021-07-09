@@ -12,6 +12,6 @@ enum ActionType: String {
 
 struct Action {
     var friend: User
-    var recommendedFilm: Film
+    var film: Film
     var actionType: ActionType
 }

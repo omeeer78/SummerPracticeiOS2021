@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		141EF8B42695F5E200EDE442 /* FillmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141EF8B32695F5E200EDE442 /* FillmTableViewCell.swift */; };
-		14BAB1E426960A72001D6688 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14BAB1E326960A72001D6688 /* Images.xcassets */; };
 		236FA3892694764900C982F3 /* Film.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 236FA3882694764900C982F3 /* Film.storyboard */; };
 		23C898DD2695D4A900125489 /* CheckListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C898DC2695D4A900125489 /* CheckListViewCell.swift */; };
 		23C898DF2695D4BE00125489 /* FilmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CBC62A26935DDA003DACDF /* FilmViewController.swift */; };
@@ -20,6 +19,7 @@
 		7CCC8C732694758100ACCA59 /* ShareNewsUITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCC8C722694758100ACCA59 /* ShareNewsUITableViewCell.swift */; };
 		7CCC8C752694795900ACCA59 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCC8C742694795900ACCA59 /* Film.swift */; };
 		7CCC8C7B2698527700ACCA59 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCC8C7A2698527700ACCA59 /* Action.swift */; };
+		7CCC8C7D2698706600ACCA59 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CCC8C7C2698706600ACCA59 /* Images.xcassets */; };
 		D10F00132690D729004999B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10F00122690D729004999B5 /* AppDelegate.swift */; };
 		D10F00152690D729004999B5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10F00142690D729004999B5 /* SceneDelegate.swift */; };
 		D10F00172690D729004999B5 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10F00162690D729004999B5 /* TabBarController.swift */; };
@@ -38,7 +38,6 @@
 
 /* Begin PBXFileReference section */
 		141EF8B32695F5E200EDE442 /* FillmTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillmTableViewCell.swift; sourceTree = "<group>"; };
-		14BAB1E326960A72001D6688 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		236FA3882694764900C982F3 /* Film.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Film.storyboard; sourceTree = "<group>"; };
 		23C898DC2695D4A900125489 /* CheckListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckListViewCell.swift; sourceTree = "<group>"; };
 		23CBC61D269349CF003DACDF /* ChecklistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistCell.swift; sourceTree = "<group>"; };
@@ -50,6 +49,7 @@
 		7CCC8C722694758100ACCA59 /* ShareNewsUITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareNewsUITableViewCell.swift; sourceTree = "<group>"; };
 		7CCC8C742694795900ACCA59 /* Film.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
 		7CCC8C7A2698527700ACCA59 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		7CCC8C7C2698706600ACCA59 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = SummerPracticeiOS2021/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		D10F000F2690D729004999B5 /* SummerPracticeiOS2021.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SummerPracticeiOS2021.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D10F00122690D729004999B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D10F00142690D729004999B5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,7 +130,7 @@
 				D10F00352690D863004999B5 /* Main */,
 				D10F001D2690D72A004999B5 /* LaunchScreen.storyboard */,
 				D10F00202690D72A004999B5 /* Info.plist */,
-				14BAB1E326960A72001D6688 /* Images.xcassets */,
+				7CCC8C7C2698706600ACCA59 /* Images.xcassets */,
 			);
 			path = SummerPracticeiOS2021;
 			sourceTree = "<group>";
@@ -259,8 +259,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CCC8C7D2698706600ACCA59 /* Images.xcassets in Resources */,
 				46A7E8D6269469A500BD6169 /* Rustem.storyboard in Resources */,
-				14BAB1E426960A72001D6688 /* Images.xcassets in Resources */,
 				D10F00302690D84C004999B5 /* Alina.storyboard in Resources */,
 				D10F00342690D85C004999B5 /* Lilya.storyboard in Resources */,
 				D10F001F2690D72A004999B5 /* LaunchScreen.storyboard in Resources */,
