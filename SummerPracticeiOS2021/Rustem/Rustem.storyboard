@@ -304,7 +304,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Сохранить изменения"/>
                                 <connections>
-                                    <action selector="saveButton:" destination="Bhv-wj-t0Y" eventType="touchUpInside" id="I6T-ib-67J"/>
+                                    <action selector="saveButtonPressed:" destination="Bhv-wj-t0Y" eventType="touchUpInside" id="I6T-ib-67J"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8J-K6-6du">
@@ -314,7 +314,7 @@
                                     <color key="titleColor" systemColor="systemRedColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="resetButton:" destination="Bhv-wj-t0Y" eventType="touchUpInside" id="HV4-ZE-Ud4"/>
+                                    <action selector="resetButtonPressed:" destination="Bhv-wj-t0Y" eventType="touchUpInside" id="HV4-ZE-Ud4"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Новый никнейм" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ios-Ov-OGp">
@@ -373,10 +373,10 @@
                     <navigationItem key="navigationItem" title="Изменить" id="uib-u1-qMt"/>
                     <connections>
                         <outlet property="genrePickerView" destination="gyG-ca-A11" id="Qg8-dB-Z95"/>
-                        <outlet property="imageImageView" destination="Swh-oZ-8hS" id="fZu-aQ-pHK"/>
                         <outlet property="nicknameTextField" destination="ios-Ov-OGp" id="J6Y-GR-3Kl"/>
                         <outlet property="resetButton" destination="f8J-K6-6du" id="lSb-w0-eu8"/>
                         <outlet property="saveButton" destination="9xD-Id-CNi" id="Kp9-hl-wrm"/>
+                        <outlet property="userAvatarImageView" destination="Swh-oZ-8hS" id="fZu-aQ-pHK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sb5-4z-0v3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

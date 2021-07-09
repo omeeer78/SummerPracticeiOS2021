@@ -8,16 +8,16 @@ class EditViewController: UIViewController, PHPickerViewControllerDelegate {
     @IBOutlet weak var genrePickerView: UIPickerView!
     @IBOutlet weak var resetButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
-    @IBOutlet weak var imageImageView: UIImageView!
-    weak var newImage: UIImage? = data.presentUser.image
-    var newFavoGengre: Genre? = data.presentUser.favoriteGenre
+    @IBOutlet weak var userAvatarImageView: UIImageView!
+    var newImage: UIImage = data.presentUser.image
+    var newFavoGengre: Genre = data.presentUser.favoriteGenre
     
     
     
     func favoGenreId() -> Int {
         let favGenre = data.presentUser.favoriteGenre
         let genres: [String] = [Genre.action.rawValue, Genre.comedy.rawValue, Genre.drama.rawValue, Genre.horror.rawValue, Genre.thriller.rawValue]
-        guard let genreRow = genres.firstIndex(of: favGenre.rawValue) else { return 0}
+        guard let genreRow = genres.firstIndex(of: favGenre.rawValue) else { return 0 }
         return genreRow
     }
     
@@ -26,13 +26,13 @@ class EditViewController: UIViewController, PHPickerViewControllerDelegate {
         genrePickerView.dataSource = self
         genrePickerView.delegate = self
         nicknameTextField.text = data.presentUser.name
-        imageImageView.image = data.presentUser.image
+        userAvatarImageView.image = data.presentUser.image
         genrePickerView.selectRow(favoGenreId(), inComponent: 0, animated: true)
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        imageImageView.image = newImage
+        userAvatarImageView.image = newImage
         
     }
     
@@ -51,8 +51,8 @@ class EditViewController: UIViewController, PHPickerViewControllerDelegate {
                 (obj, errors) in
                 if let theImage = obj as? UIImage {
                     DispatchQueue.main.async {
-                        self.imageImageView.image = theImage
-                        self.newImage = self.imageImageView.image
+                        self.userAvatarImageView.image = theImage
+                        self.newImage = self.userAvatarImageView.image ?? UIImage()
                     }
                 }
             }
@@ -62,20 +62,23 @@ class EditViewController: UIViewController, PHPickerViewControllerDelegate {
         picker.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func resetButton(_ sender: UIButton) {
+    @IBAction func resetButtonPressed(_ sender: UIButton) {
         data.presentUser.checklist = []
         navigationController?.popToRootViewController(animated: true)
     }
     
-    @IBAction func saveButton(_ sender: UIButton) {
+    @IBAction func saveButtonPressed(_ sender: UIButton) {
         let newName = nicknameTextField.text
         if (newName != ""){
             data.presentUser.name = newName ?? data.presentUser.name
         }
-        data.presentUser.image = newImage ?? data.presentUser.image
-        data.presentUser.favoriteGenre = newFavoGengre ?? data.presentUser.favoriteGenre
+        data.presentUser.image = newImage
+        data.presentUser.favoriteGenre = edit.newFavoGengre
         navigationController?.popToRootViewController(animated: true)
     }
+    
+   
+    
 }
 
 extension UIViewController: UIPickerViewDataSource{
@@ -88,7 +91,7 @@ extension UIViewController: UIPickerViewDataSource{
     }
 }
 
-    var edit = EditViewController()
+var edit = EditViewController.init()
 
 extension UIViewController: UIPickerViewDelegate{
     public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
