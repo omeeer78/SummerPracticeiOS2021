@@ -104,7 +104,7 @@ class Database {
     }
     
     func actionHappened(friend: User, film: Film, type:ActionType) {
-        actions[presentUser]?.append(Action(friend: friend, film: film, actionType: type))
+        actions[friend]?.append(Action(friend: presentUser, film: film, actionType: type))
     }
     
 }
