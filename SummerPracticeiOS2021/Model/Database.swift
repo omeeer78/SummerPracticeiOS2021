@@ -84,6 +84,16 @@ class Database {
                                 (Action(friend: users[3], film: films[6], actionType: ActionType.sharing)),
                                 (Action(friend: users[4], film: films[9], actionType: ActionType.sharing))]
     }
+    func updateFilmCheckListStatus(film: Film, newStatus:Status){
+            
+            guard let index = users[0].checklist.firstIndex(where: { $0.film.title == film.title }) else {
+                
+                let newChecklistModel = ChecklistCellModel(film: film, addingDate: Date(), status: newStatus)
+                users[0].checklist.append(newChecklistModel)
+                return }
+            let newChecklistModel = ChecklistCellModel(film: film, addingDate: users[0].checklist[index].addingDate, status: newStatus)
+            users[0].checklist[index] = newChecklistModel
+        }
 }
 
 var data = Database()
