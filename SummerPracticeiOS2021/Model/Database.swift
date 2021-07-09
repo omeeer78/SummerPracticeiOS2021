@@ -95,4 +95,3 @@ class Database {
 }
 
 var data = Database()
-
