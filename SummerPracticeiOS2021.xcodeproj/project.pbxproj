@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2333F969269745AB009240EC /* FriendsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2333F968269745AB009240EC /* FriendsListViewController.swift */; };
-		2333F96C26974F16009240EC /* FriendsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2333F96B26974F16009240EC /* FriendsListTableViewCell.swift */; };
 		2344DE1426946C9400408540 /* BigFriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2344DE1326946C9400408540 /* BigFriendsTableViewCell.swift */; };
 		2344DE18269475FA00408540 /* FriendPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2344DE17269475FA00408540 /* FriendPageViewController.swift */; };
 		236FA3892694764900C982F3 /* Film.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 236FA3882694764900C982F3 /* Film.storyboard */; };
@@ -38,8 +36,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2333F968269745AB009240EC /* FriendsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListViewController.swift; sourceTree = "<group>"; };
-		2333F96B26974F16009240EC /* FriendsListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListTableViewCell.swift; sourceTree = "<group>"; };
 		2344DE1326946C9400408540 /* BigFriendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigFriendsTableViewCell.swift; sourceTree = "<group>"; };
 		2344DE17269475FA00408540 /* FriendPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendPageViewController.swift; sourceTree = "<group>"; };
 		236FA3882694764900C982F3 /* Film.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Film.storyboard; sourceTree = "<group>"; };
@@ -145,8 +141,6 @@
 				2344DE17269475FA00408540 /* FriendPageViewController.swift */,
 				D10F00412690DC97004999B5 /* LilyaViewController.swift */,
 				2344DE1326946C9400408540 /* BigFriendsTableViewCell.swift */,
-				2333F968269745AB009240EC /* FriendsListViewController.swift */,
-				2333F96B26974F16009240EC /* FriendsListTableViewCell.swift */,
 			);
 			path = Lilya;
 			sourceTree = "<group>";
@@ -287,7 +281,6 @@
 				D10F003E2690DC8E004999B5 /* AlinaViewController.swift in Sources */,
 				D10F003C2690DC8A004999B5 /* ChecklistViewController.swift in Sources */,
 				23CBC61E269349CF003DACDF /* ChecklistCell.swift in Sources */,
-				2333F969269745AB009240EC /* FriendsListViewController.swift in Sources */,
 				2344DE1426946C9400408540 /* BigFriendsTableViewCell.swift in Sources */,
 				D10F00172690D729004999B5 /* TabBarController.swift in Sources */,
 				23C898DD2695D4A900125489 /* CheckListViewCell.swift in Sources */,
@@ -299,7 +292,6 @@
 				2344DE18269475FA00408540 /* FriendPageViewController.swift in Sources */,
 				D10F00152690D729004999B5 /* SceneDelegate.swift in Sources */,
 				46C2150A26933FB6007AE61D /* EditViewController.swift in Sources */,
-				2333F96C26974F16009240EC /* FriendsListTableViewCell.swift in Sources */,
 				23C898DF2695D4BE00125489 /* FilmViewController.swift in Sources */,
 				23C898D52695D30300125489 /* Film.swift in Sources */,
 			);

@@ -161,7 +161,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="82d-yS-4S8">
-                                <rect key="frame" x="20" y="578" width="374" height="236"/>
+                                <rect key="frame" x="20" y="509" width="374" height="305"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -175,29 +175,18 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fl3-fK-bIV">
-                                <rect key="frame" x="20" y="457" width="381" height="39"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMH-qO-fDS">
+                                <rect key="frame" x="20" y="465" width="374" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.82554276743714294" green="1" blue="0.72632514524476521" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.82554276739999999" green="1" blue="0.72632514520000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" red="0.032312767919999999" green="0.3489626025" blue="0.14770651879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
+                                <color key="textColor" red="0.032312767919999999" green="0.3489626025" blue="0.14770651879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="friendsCellButton:" destination="m2s-Dx-bOM" eventType="touchUpInside" id="zS1-FR-1uq"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Рекомендует" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMH-qO-fDS">
-                                <rect key="frame" x="23" y="521" width="374" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wde-CB-ul6"/>
@@ -207,8 +196,8 @@
                     <connections>
                         <outlet property="avaImage" destination="tfo-z5-fe5" id="Vnd-gG-b7L"/>
                         <outlet property="favGenre" destination="pTH-IN-sR3" id="csb-3J-d3l"/>
-                        <outlet property="friendsCell" destination="fl3-fK-bIV" id="dB1-Ha-0P3"/>
                         <outlet property="nickname" destination="ZVC-h6-s6o" id="j17-hq-2I2"/>
+                        <outlet property="recomendations" destination="rMH-qO-fDS" id="UZ2-pz-bCS"/>
                         <outlet property="wantwatchLabel" destination="Iqc-qC-KpP" id="POd-cE-D4b"/>
                         <outlet property="watchedLabel" destination="Lzb-Wl-jRI" id="tGB-6M-Mo9"/>
                         <outlet property="watchingLabel" destination="MRL-MR-xGE" id="o0w-ko-lGO"/>
@@ -233,63 +222,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ep-HY-hz1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1516" y="116"/>
-        </scene>
-        <!--Friends List View Controller-->
-        <scene sceneID="yPd-yg-zB0">
-            <objects>
-                <viewController storyboardIdentifier="FriendsListViewController" id="5iu-dS-Edj" customClass="FriendsListViewController" customModule="SummerPracticeiOS2021" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="08d-MZ-J5P">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pIc-7g-idH">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="FriendsListTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendsListTableViewCell" rowHeight="96" id="lue-gA-wzz" customClass="FriendsListTableViewCell" customModule="SummerPracticeiOS2021" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="96"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lue-gA-wzz" id="fdC-c2-N1J">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="96"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5zP-LY-CPh">
-                                                    <rect key="frame" x="20" y="11" width="70" height="70"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                            <integer key="value" value="15"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p9P-vO-8TZ">
-                                                    <rect key="frame" x="110" y="11" width="284" height="70"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="friendAvatar" destination="5zP-LY-CPh" id="i3Z-A1-9v6"/>
-                                            <outlet property="friendName" destination="p9P-vO-8TZ" id="tcx-2j-qGQ"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="8nY-gU-m2J"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <connections>
-                        <outlet property="tableView" destination="pIc-7g-idH" id="XSc-nn-pfI"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="622-wd-mea" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="753.62318840579712" y="115.84821428571428"/>
         </scene>
     </scenes>
     <resources>

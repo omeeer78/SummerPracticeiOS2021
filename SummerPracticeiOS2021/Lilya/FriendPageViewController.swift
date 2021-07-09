@@ -12,7 +12,7 @@ class FriendPageViewController: UIViewController {
     @IBOutlet weak var avaImage: UIImageView!
     @IBOutlet weak var nickname: UILabel!
     @IBOutlet weak var favGenre: UILabel!
-    @IBOutlet weak var friendsCell: UIButton!
+    @IBOutlet weak var recomendations: UILabel!
     
     @IBOutlet weak var watchedLabel: UILabel!
     @IBOutlet weak var watchingLabel: UILabel!
@@ -22,7 +22,7 @@ class FriendPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        friendsCell.setTitle("Друзья " + friends.name + "'s", for: .normal)
+        recomendations.text = "Рекомендации " + friends.name //+ "'s"
         let a: String = String(Status.completed.rawValue)
         let b: String = String(Status.watching.rawValue)
         let c: String = String(Status.wantToWatch.rawValue)
@@ -59,9 +59,5 @@ class FriendPageViewController: UIViewController {
     
     @IBAction func wantToWatchButtonFuction(_ sender: Any) {
      
-    }
-    @IBAction func friendsCellButton(_ sender: Any) {
-        guard let friendCellViewController = storyboard?.instantiateViewController(identifier: "FriendsListViewController") as? FriendsListViewController else { return }
-        present(friendCellViewController, animated: true)
     }
 }
