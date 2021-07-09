@@ -29,7 +29,6 @@ class RustemViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -65,7 +64,7 @@ class RustemViewController: UIViewController {
     
     
     @IBAction func editProfileButtonItem(_ sender: UIBarButtonItem) {
-        guard let editVC = storyboard?.instantiateViewController(withIdentifier: "EditViewController") else { return  }
+        guard let editVC = storyboard?.instantiateViewController(withIdentifier: "EditViewController") else { return }
         navigationController?.pushViewController(editVC, animated: true)
     }
     
@@ -73,15 +72,6 @@ class RustemViewController: UIViewController {
         let watchlist = UIStoryboard(name: "Andrey", bundle: nil)
         guard let watchlistVC = watchlist.instantiateViewController(identifier: "ChecklistViewController") as? ChecklistViewController else { return }
         navigationController?.pushViewController(watchlistVC, animated: true)
-    }
-    
-    @IBAction func goToAlreadyWatchedButton(_ sender: UIButton) {
-        let alreadyWatched = UIStoryboard(name: "Andrey", bundle: nil)
-        guard let alreadyWatchedVC = alreadyWatched.instantiateViewController(identifier: "ChecklistViewController") as? ChecklistViewController else { return }
-        delegate = alreadyWatchedVC
-        delegate?.openPage(page: 2)
-        navigationController?.pushViewController(alreadyWatchedVC, animated: true)
-        
     }
     
     @IBAction func goToNowWatchingButton(_ sender: UIButton) {
@@ -92,10 +82,19 @@ class RustemViewController: UIViewController {
         navigationController?.pushViewController(nowWatchingVC, animated: true)
     }
     
+    @IBAction func goToAlreadyWatchedButton(_ sender: UIButton) {
+        let alreadyWatched = UIStoryboard(name: "Andrey", bundle: nil)
+        guard let alreadyWatchedVC = alreadyWatched.instantiateViewController(identifier: "ChecklistViewController") as? ChecklistViewController else { return }
+        delegate = alreadyWatchedVC
+        delegate?.openPage(page: 2)
+        navigationController?.pushViewController(alreadyWatchedVC, animated: true)
+    }
+    
+    
     @IBAction func goToFriendsButton(_ sender: UIButton) {
-        //        let friendsList = UIStoryboard(name: "Lilya", bundle: nil)
-        //        guard let friendsListVC = friendsList.instantiateViewController(withIdentifier: "LilyaViewController") as? LilyaViewController else { return }
-        //        navigationController?.pushViewController(friendsListVC, animated: true)
+        let friendsList = UIStoryboard(name: "Lilya", bundle: nil)
+        guard let friendsListVC = friendsList.instantiateViewController(withIdentifier: "LilyaViewController") as? LilyaViewController else { return }
+        navigationController?.pushViewController(friendsListVC, animated: true)
     }
     
     @IBAction func goToTheMovieButton (_ sender: Any){
@@ -103,10 +102,19 @@ class RustemViewController: UIViewController {
         guard let movieVC = recommendedMovieStoryboard.instantiateViewController(withIdentifier: "FilmViewController") as? FilmViewController else { return }
         let recommendedMovie = data.films.filter{$0.title == recommendedMovieLabel.text}.first
         movieVC.film = recommendedMovie
+        movieVC.delegate = self
         present(movieVC, animated: true)
     }
     
-    
-    
-    
+}
+
+extension RustemViewController:FilmViewControllerDelegate{
+    func reloadTable(page: Int) {
+        let wantToWatchValue = data.presentUser.checklist.filter{$0.status == Status.wantToWatch}.count
+        let nowWatchingValue = data.presentUser.checklist.filter{$0.status == Status.watching}.count
+        let alreadyWatchedValue = data.presentUser.checklist.filter{$0.status == Status.completed}.count
+        wantToWatchButton.setTitle(String(wantToWatchValue), for: .normal)
+        nowWatchingButton.setTitle(String(nowWatchingValue), for: .normal)
+        alreadyWatchedButton.setTitle(String(alreadyWatchedValue), for: .normal)
+    }
 }
