@@ -11,7 +11,7 @@ class ChecklistViewController: UIViewController {
     
     @IBOutlet weak var segmentedControll: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
-    var checklistData: [ChecklistCellModel] = data.users[0].checklist
+    var checklistData: [ChecklistCellModel] = data.presentUser.checklist
     var currentStatus = 0
     
     
@@ -24,7 +24,7 @@ class ChecklistViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        checklistData = data.users[0].checklist
+        checklistData = data.presentUser.checklist
         tableView.reloadData()
     }
     
@@ -36,7 +36,7 @@ class ChecklistViewController: UIViewController {
     
     func openChecklistPage(_ page: Int){
         currentStatus = page
-        checklistData = data.users[0].checklist
+        checklistData = data.presentUser.checklist
         tableView.reloadData()
         segmentedControll.selectedSegmentIndex = page
     }
@@ -80,7 +80,7 @@ extension ChecklistViewController:UITableViewDataSource{
 
 extension ChecklistViewController: FilmViewControllerDelegate {
     func reloadTable(page: Int) {
-        checklistData = data.users[0].checklist
+        checklistData = data.presentUser.checklist
         openChecklistPage(page)
     }
 }

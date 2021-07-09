@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hNV-kp-ydy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hNV-kp-ydy">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -38,10 +38,10 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CheckListViewCell" rowHeight="86" id="IUl-SP-Qqr" customClass="CheckListViewCell" customModule="SummerPracticeiOS2021" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="86"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="86"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IUl-SP-Qqr" id="Krz-CO-s3o">
-                                            <rect key="frame" x="0.0" y="0.0" width="384.5" height="86"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="86"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RKd-Yw-v8y">
@@ -108,8 +108,8 @@
                     <navigationItem key="navigationItem" title="Чеклист" id="yP5-XT-Zac"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="segmentedControll" destination="25N-w8-OXc" id="u9Z-LH-2gm"/>
-                        <outlet property="tableView" destination="OhJ-Rv-PZf" id="FBC-Eh-YSV"/>
+                        <outlet property="segmentedControll" destination="25N-w8-OXc" id="PRD-nr-4oN"/>
+                        <outlet property="tableView" destination="OhJ-Rv-PZf" id="irx-3K-Yfs"/>
                         <segue destination="tEC-Og-DPr" kind="presentation" identifier="showFilm" id="2Py-oY-mxV"/>
                     </connections>
                 </viewController>
@@ -123,7 +123,7 @@
                 <viewControllerPlaceholder storyboardName="Film" id="tEC-Og-DPr" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UkV-Et-l62" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="273" y="90"/>
+            <point key="canvasLocation" x="29" y="130"/>
         </scene>
     </scenes>
     <resources>
