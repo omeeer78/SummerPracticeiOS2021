@@ -27,19 +27,19 @@ extension LilyaViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         guard let friendPageViewController = storyboard?.instantiateViewController(identifier: "FriendPageViewController") as? FriendPageViewController else { return }
-        friendPageViewController.friends = data.users[0].friends[indexPath.row]
+        friendPageViewController.friends = data.presentUser.friends[indexPath.row]
         navigationController?.pushViewController(friendPageViewController, animated: true)
     }
 }
 
 extension LilyaViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        data.users[0].friends.count
+        data.presentUser.friends.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "BigFriendsTableViewCell", for: indexPath) as? BigFriendsTableViewCell else { return UITableViewCell() }
-        cell.SetData(friends: data.users[0].friends[indexPath.row])
+        cell.SetData(friends: data.presentUser.friends[indexPath.row])
         return cell
         
     }
