@@ -169,7 +169,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="alreadyWatchedButton" destination="5jO-Qs-0mA" id="Vsz-ll-gXl"/>
-                        <outlet property="favoriteGenreButton" destination="QOE-91-E0L" id="oY7-dB-c30"/>
+                        <outlet property="favoriteGenreLabel" destination="QOE-91-E0L" id="psH-Wm-jWs"/>
                         <outlet property="imageImageView" destination="EVp-ld-b2i" id="sFX-7g-Bjr"/>
                         <outlet property="nicknameLabel" destination="5oS-Kt-tpm" id="SRJ-E5-5kr"/>
                         <outlet property="nowWatchingButton" destination="f9M-e1-lHh" id="f8j-uo-crX"/>

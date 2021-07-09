@@ -4,15 +4,20 @@
 //
 //  Created by itisioslab on 05.07.2021.
 //
-
 import UIKit
 
 class Database {
     
     init() {
+        presentUser = users[0]
         addFriends()
         addChecklist()
+        addActions()
     }
+    
+    var actions: [User : [Action]] = [:]
+    
+    var presentUser: User
     
     var users: [User] = [User(name: "unterlantas", image: #imageLiteral(resourceName: "drag"), favoriteGenre: Genre.thriller, password: "123", friends: [], checklist: []),
                          User(name: "Andrewoch", image: UIImage(named: "durov") ?? UIImage(), favoriteGenre: Genre.horror, password: "432", friends: [], checklist: []),
@@ -24,7 +29,6 @@ class Database {
                          User(name: "kemal645", image: UIImage(named: "papich") ?? UIImage(), favoriteGenre: Genre.action, password: "000", friends: [], checklist: []),
                          User(name: "devilish_smile", image: UIImage(named: "pink") ?? UIImage(), favoriteGenre: Genre.drama, password: "666", friends: [], checklist: []),
                          User(name: "primetime11", image: UIImage(named: "guf") ?? UIImage(), favoriteGenre: Genre.thriller, password: "111", friends: [], checklist: [])]
-    
     var films: [Film] = [Film(title: "Побег из Шоушенка", director: "Фрэнк Дарабонт", annotation: "Выдающаяся драма о силе таланта, важности дружбы,                       стремлении к свободе и Рите Хэйворт", image: UIImage(named: "Shawshenk") ?? UIImage(), rating: 8.9, genre: Genre.drama),
                          Film(title: "Чёрная роза", director: "Александр Невский", annotation: "Майор московской полиции отправляется в Лос-Анджелес для помощи в расследовании серии убийств русских эмигрантов.", image: UIImage(named: "black rose") ?? UIImage(), rating: 1.5, genre: Genre.action),
                          Film(title: "Интерстеллар", director: "Кристофер Нолан", annotation: "Фантастический эпос про задыхающуюся Землю, космические полеты и парадоксы времени.", image: UIImage(named: "interstellar") ?? UIImage(), rating: 8.6, genre: Genre.drama),
@@ -62,35 +66,46 @@ class Database {
                          Film(title: "Однажды в Голливуде", director: "Квентин Тарантино", annotation: "Можно ли переписать историю? Самый ностальгический фильм Тарантино — с Шэрон Тейт, Брюсом Ли и Чарли Мэнсоном.", image: UIImage(named: "hollywood") ?? UIImage(), rating: 8.0, genre: Genre.action),
                          Film(title: "007: Не время умирать", director: "Кэри Дзёдзи Фуканага", annotation: "Бонд попадает в ловушку к таинственному злодею, вооруженному опасным технологическим оружием.", image: UIImage(named: "no time") ?? UIImage(), rating: 7.5, genre: Genre.action)]
     
-    func addFriends(){
-        users[0].friends = [users[1], users[2], users[3], users[4], users[5], users[6], users[7], users[8], users[9]]
+    func addFriends() {
+        presentUser.friends = [users[1], users[2], users[3], users[4], users[5], users[6], users[7], users[8], users[9]]
     }
     
     func addChecklist(){
-        users[0].checklist = [ChecklistCellModel(film: films[0], addingDate: Date(), status: Status.wantToWatch),
-                              ChecklistCellModel(film: films[9], addingDate: Date(), status: Status.completed),
-                              ChecklistCellModel(film: films[2], addingDate: Date(), status: Status.watching),
-                              ChecklistCellModel(film: films[3], addingDate: Date(), status: Status.completed),
-                              ChecklistCellModel(film: films[4], addingDate: Date(), status: Status.watching),
-                              ChecklistCellModel(film: films[5], addingDate: Date(), status: Status.completed),
-                              ChecklistCellModel(film: films[6], addingDate: Date(), status: Status.completed),
-                              ChecklistCellModel(film: films[8], addingDate: Date(), status: Status.watching),
-                              ChecklistCellModel(film: films[7], addingDate: Date(), status: Status.wantToWatch),
-                              ChecklistCellModel(film: films[17], addingDate: Date(), status: Status.wantToWatch)]
+        presentUser.checklist = [ChecklistCellModel(film: films[0], addingDate: Date(), status: Status.wantToWatch),
+                                 ChecklistCellModel(film: films[9], addingDate: Date(), status: Status.completed),
+                                 ChecklistCellModel(film: films[2], addingDate: Date(), status: Status.watching),
+                                 ChecklistCellModel(film: films[3], addingDate: Date(), status: Status.completed),
+                                 ChecklistCellModel(film: films[4], addingDate: Date(), status: Status.watching),
+                                 ChecklistCellModel(film: films[5], addingDate: Date(), status: Status.completed),
+                                 ChecklistCellModel(film: films[6], addingDate: Date(), status: Status.completed),
+                                 ChecklistCellModel(film: films[8], addingDate: Date(), status: Status.watching),
+                                 ChecklistCellModel(film: films[7], addingDate: Date(), status: Status.wantToWatch),
+                                 ChecklistCellModel(film: films[17], addingDate: Date(), status: Status.wantToWatch)]
         
+    }
+    
+    func addActions() {
+        actions[presentUser] = [(Action(friend: users[1], film: films[2], actionType: ActionType.haveWatched)),
+                                (Action(friend: users[2], film: films[4], actionType: ActionType.sharing)),
+                                (Action(friend: users[3], film: films[6], actionType: ActionType.sharing)),
+                                (Action(friend: users[4], film: films[9], actionType: ActionType.sharing))]
     }
     
     func updateFilmCheckListStatus(film: Film, newStatus:Status){
         
-        guard let index = users[0].checklist.firstIndex(where: { $0.film.title == film.title }) else {
+        guard let index = presentUser.checklist.firstIndex(where: { $0.film.title == film.title }) else {
             
             let newChecklistModel = ChecklistCellModel(film: film, addingDate: Date(), status: newStatus)
-            users[0].checklist.append(newChecklistModel)
+            presentUser.checklist.append(newChecklistModel)
             return }
-        let newChecklistModel = ChecklistCellModel(film: film, addingDate: users[0].checklist[index].addingDate, status: newStatus)
-        users[0].checklist[index] = newChecklistModel
+        let newChecklistModel = ChecklistCellModel(film: film, addingDate: presentUser.checklist[index].addingDate, status: newStatus)
+        presentUser.checklist[index] = newChecklistModel
     }
     
+    func actionHappened(friend: User, film: Film, type:ActionType) {
+        
+        actions[presentUser]?.append(Action(friend: friend, film: film, actionType: type))
+    }
     
 }
 

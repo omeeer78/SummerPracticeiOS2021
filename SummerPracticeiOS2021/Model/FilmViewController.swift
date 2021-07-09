@@ -80,4 +80,12 @@ class FilmViewController: UIViewController {
         delegate?.reloadTable(page: Status.completed.rawValue)
         self.dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func recommendToFriend(_ sender: Any) {
+        
+        guard let recommendViewController = storyboard?.instantiateViewController(identifier: "RecommendViewController") as? RecommendViewController else { return }
+        recommendViewController.filmToRecommend = film ?? nil
+        present(recommendViewController, animated: true, completion: nil)
+    }
+    
 }
