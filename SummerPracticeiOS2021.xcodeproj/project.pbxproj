@@ -19,6 +19,7 @@
 		46C2150A26933FB6007AE61D /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C2150926933FB6007AE61D /* EditViewController.swift */; };
 		7CCC8C732694758100ACCA59 /* ShareNewsUITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCC8C722694758100ACCA59 /* ShareNewsUITableViewCell.swift */; };
 		7CCC8C752694795900ACCA59 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCC8C742694795900ACCA59 /* Film.swift */; };
+		7CCC8C7B2698527700ACCA59 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCC8C7A2698527700ACCA59 /* Action.swift */; };
 		D10F00132690D729004999B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10F00122690D729004999B5 /* AppDelegate.swift */; };
 		D10F00152690D729004999B5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10F00142690D729004999B5 /* SceneDelegate.swift */; };
 		D10F00172690D729004999B5 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10F00162690D729004999B5 /* TabBarController.swift */; };
@@ -48,6 +49,7 @@
 		46C2150926933FB6007AE61D /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		7CCC8C722694758100ACCA59 /* ShareNewsUITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareNewsUITableViewCell.swift; sourceTree = "<group>"; };
 		7CCC8C742694795900ACCA59 /* Film.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
+		7CCC8C7A2698527700ACCA59 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		D10F000F2690D729004999B5 /* SummerPracticeiOS2021.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SummerPracticeiOS2021.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D10F00122690D729004999B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D10F00142690D729004999B5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				23CBC626269352F1003DACDF /* User.swift */,
 				236FA3882694764900C982F3 /* Film.storyboard */,
 				23CBC62A26935DDA003DACDF /* FilmViewController.swift */,
+				7CCC8C7A2698527700ACCA59 /* Action.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				23CBC627269352F1003DACDF /* User.swift in Sources */,
+				7CCC8C7B2698527700ACCA59 /* Action.swift in Sources */,
 				D10F003E2690DC8E004999B5 /* AlinaViewController.swift in Sources */,
 				7CCC8C732694758100ACCA59 /* ShareNewsUITableViewCell.swift in Sources */,
 				7CCC8C752694795900ACCA59 /* Film.swift in Sources */,

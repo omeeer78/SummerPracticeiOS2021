@@ -11,15 +11,18 @@ class AlinaViewController: UIViewController {
     
     @IBOutlet weak var newsUITableView: UITableView!
     
-    override func viewWillAppear(_ animated: Bool) {
-        let test = Database()
-        actions.append(Action(friend: test.users[1], recommendedFilm: test.films[1], actionType: ActionType.haveWatched))
-        actions.append(Action(friend: test.users[2], recommendedFilm: test.films[3], actionType: ActionType.sharing))
-        actions.append(Action(friend: test.users[3], recommendedFilm: test.films[7], actionType: ActionType.sharing))
-        actions.append(Action(friend: test.users[4], recommendedFilm: test.films[0], actionType: ActionType.sharing))
-    }
+//    override func viewWillAppear(_ animated: Bool) {
+//        let test = Database()
+//        actions.append(Action(friend: test.users[1], recommendedFilm: test.films[1], actionType: ActionType.haveWatched))
+//        actions.append(Action(friend: test.users[2], recommendedFilm: test.films[3], actionType: ActionType.sharing))
+//        actions.append(Action(friend: test.users[3], recommendedFilm: test.films[7], actionType: ActionType.sharing))
+//        actions.append(Action(friend: test.users[4], recommendedFilm: test.films[0], actionType: ActionType.sharing))
+//    }
     
-    var actions: [Action] = []
+    var actions: [Action] = data.actions[data.presentUseer] ?? [(Action(friend: data.users[1], recommendedFilm: data.films[1], actionType: ActionType.haveWatched)),
+                                                                    (Action(friend: data.users[2], recommendedFilm: data.films[3], actionType: ActionType.sharing)),
+                                                                    (Action(friend: data.users[3], recommendedFilm: data.films[7], actionType: ActionType.sharing)),
+                                                                    (Action(friend: data.users[4], recommendedFilm: data.films[0], actionType: ActionType.sharing))]
     
     override func viewDidLoad() {
         super.viewDidLoad()
