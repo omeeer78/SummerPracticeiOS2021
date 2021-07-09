@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		141EF8B42695F5E200EDE442 /* FillmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141EF8B32695F5E200EDE442 /* FillmTableViewCell.swift */; };
+		14BAB1E426960A72001D6688 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14BAB1E326960A72001D6688 /* Images.xcassets */; };
 		236FA3892694764900C982F3 /* Film.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 236FA3882694764900C982F3 /* Film.storyboard */; };
 		23C898D52695D30300125489 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C898D42695D30300125489 /* Film.swift */; };
 		23C898DD2695D4A900125489 /* CheckListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C898DC2695D4A900125489 /* CheckListViewCell.swift */; };
@@ -20,7 +22,6 @@
 		D10F00152690D729004999B5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10F00142690D729004999B5 /* SceneDelegate.swift */; };
 		D10F00172690D729004999B5 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10F00162690D729004999B5 /* TabBarController.swift */; };
 		D10F001A2690D729004999B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D10F00182690D729004999B5 /* Main.storyboard */; };
-		D10F001C2690D72A004999B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D10F001B2690D72A004999B5 /* Assets.xcassets */; };
 		D10F001F2690D72A004999B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D10F001D2690D72A004999B5 /* LaunchScreen.storyboard */; };
 		D10F002E2690D846004999B5 /* Andrey.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D10F002D2690D846004999B5 /* Andrey.storyboard */; };
 		D10F00302690D84C004999B5 /* Alina.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D10F002F2690D84C004999B5 /* Alina.storyboard */; };
@@ -34,6 +35,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		141EF8B32695F5E200EDE442 /* FillmTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillmTableViewCell.swift; sourceTree = "<group>"; };
+		14BAB1E326960A72001D6688 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		236FA3882694764900C982F3 /* Film.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Film.storyboard; sourceTree = "<group>"; };
 		23C898D42695D30300125489 /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
 		23C898DC2695D4A900125489 /* CheckListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckListViewCell.swift; sourceTree = "<group>"; };
@@ -49,7 +52,6 @@
 		D10F00142690D729004999B5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D10F00162690D729004999B5 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		D10F00192690D729004999B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D10F001B2690D72A004999B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D10F001E2690D72A004999B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D10F00202690D72A004999B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D10F002D2690D846004999B5 /* Andrey.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Andrey.storyboard; sourceTree = "<group>"; };
@@ -123,9 +125,9 @@
 				D10F00262690D7F6004999B5 /* Lilya */,
 				D10F00382690D91F004999B5 /* Helpers */,
 				D10F00352690D863004999B5 /* Main */,
-				D10F001B2690D72A004999B5 /* Assets.xcassets */,
 				D10F001D2690D72A004999B5 /* LaunchScreen.storyboard */,
 				D10F00202690D72A004999B5 /* Info.plist */,
+				14BAB1E326960A72001D6688 /* Images.xcassets */,
 			);
 			path = SummerPracticeiOS2021;
 			sourceTree = "<group>";
@@ -144,6 +146,7 @@
 			children = (
 				D10F00312690D852004999B5 /* Alsu.storyboard */,
 				D10F003F2690DC92004999B5 /* AlsuViewController.swift */,
+				141EF8B32695F5E200EDE442 /* FillmTableViewCell.swift */,
 			);
 			path = Alsu;
 			sourceTree = "<group>";
@@ -253,10 +256,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				46A7E8D6269469A500BD6169 /* Rustem.storyboard in Resources */,
+				14BAB1E426960A72001D6688 /* Images.xcassets in Resources */,
 				D10F00302690D84C004999B5 /* Alina.storyboard in Resources */,
 				D10F00342690D85C004999B5 /* Lilya.storyboard in Resources */,
 				D10F001F2690D72A004999B5 /* LaunchScreen.storyboard in Resources */,
-				D10F001C2690D72A004999B5 /* Assets.xcassets in Resources */,
 				236FA3892694764900C982F3 /* Film.storyboard in Resources */,
 				D10F00322690D852004999B5 /* Alsu.storyboard in Resources */,
 				D10F002E2690D846004999B5 /* Andrey.storyboard in Resources */,
@@ -281,6 +284,7 @@
 				23CBC6242693503A003DACDF /* Database.swift in Sources */,
 				D10F00402690DC92004999B5 /* AlsuViewController.swift in Sources */,
 				D10F003A2690DC86004999B5 /* RustemViewController.swift in Sources */,
+				141EF8B42695F5E200EDE442 /* FillmTableViewCell.swift in Sources */,
 				D10F00422690DC97004999B5 /* LilyaViewController.swift in Sources */,
 				D10F00152690D729004999B5 /* SceneDelegate.swift in Sources */,
 				46C2150A26933FB6007AE61D /* EditViewController.swift in Sources */,
