@@ -9,11 +9,11 @@ import UIKit
 
 class BigFriendsTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var friendAvatar: UIImageView!
-    @IBOutlet weak var friendName: UILabel!
+    @IBOutlet weak var friendAvatarImageView: UIImageView!
+    @IBOutlet weak var friendNameLabel: UILabel!
 
-    func SetData(friends: User)  {
-        friendName.text = friends.name
-        friendAvatar.image = friends.image
+    func setData(friend: User)  {
+        friendNameLabel.text = friend.name
+        friendAvatarImageView.image = friend.image
     }
 }

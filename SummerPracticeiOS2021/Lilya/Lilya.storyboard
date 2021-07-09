@@ -47,8 +47,8 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="friendAvatar" destination="gNc-39-5B8" id="xjs-YX-ZLS"/>
-                                            <outlet property="friendName" destination="uL6-NS-TC7" id="H2u-zA-qUo"/>
+                                            <outlet property="friendAvatarImageView" destination="gNc-39-5B8" id="282-5m-HD7"/>
+                                            <outlet property="friendNameLabel" destination="uL6-NS-TC7" id="omX-rP-z62"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -199,11 +199,10 @@
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <connections>
-                        <outlet property="avaImage" destination="tfo-z5-fe5" id="Vnd-gG-b7L"/>
-                        <outlet property="favGenre" destination="pTH-IN-sR3" id="csb-3J-d3l"/>
-                        <outlet property="friendsRecs" destination="rMH-qO-fDS" id="z2a-DS-H0Y"/>
-                        <outlet property="nickname" destination="ZVC-h6-s6o" id="j17-hq-2I2"/>
-                        <outlet property="recomendations" destination="rMH-qO-fDS" id="UZ2-pz-bCS"/>
+                        <outlet property="avaImageLabel" destination="tfo-z5-fe5" id="TPX-Uz-yKJ"/>
+                        <outlet property="favGenreLabel" destination="pTH-IN-sR3" id="f9u-a5-IEa"/>
+                        <outlet property="nicknameLabel" destination="ZVC-h6-s6o" id="ttD-OT-Wma"/>
+                        <outlet property="recomendationsLabel" destination="rMH-qO-fDS" id="zDI-S3-xq2"/>
                         <outlet property="recomendsTableView" destination="82d-yS-4S8" id="NWn-yk-q3o"/>
                         <outlet property="wantwatchLabel" destination="Iqc-qC-KpP" id="POd-cE-D4b"/>
                         <outlet property="watchedLabel" destination="Lzb-Wl-jRI" id="tGB-6M-Mo9"/>

@@ -9,11 +9,10 @@ import UIKit
 
 class FriendPageViewController: UIViewController {
     
-    @IBOutlet weak var avaImage: UIImageView!
-    @IBOutlet weak var nickname: UILabel!
-    @IBOutlet weak var favGenre: UILabel!
-    @IBOutlet weak var recomendations: UILabel!
-    @IBOutlet weak var friendsRecs: UILabel!
+    @IBOutlet weak var avaImageLabel: UIImageView!
+    @IBOutlet weak var nicknameLabel: UILabel!
+    @IBOutlet weak var favGenreLabel: UILabel!
+    @IBOutlet weak var recomendationsLabel: UILabel!
     
     @IBOutlet weak var watchedLabel: UILabel!
     @IBOutlet weak var watchingLabel: UILabel!
@@ -21,23 +20,21 @@ class FriendPageViewController: UIViewController {
     
     @IBOutlet weak var recomendsTableView: UITableView!
     
-    var friends: User!
+    var friend: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        recomendations.text = "Рекомендации " + friends.name //+ "'s"
-        let a: String = String(friends.checklist.filter{$0.status == Status.completed}.count)
-        let b: String = String(friends.checklist.filter{$0.status == Status.watching}.count)
-        let c: String = String(friends.checklist.filter{$0.status == Status.wantToWatch}.count)
-        watchedLabel.text = a
-        watchingLabel.text = b
-        wantwatchLabel.text = c
-        watchingLabel.text = b
-        wantwatchLabel.text = c
-        avaImage.image = friends.image
-        nickname.text = friends.name
+        recomendationsLabel.text = "Рекомендации " + friend.name //+ "'s"
+        let watched: String = String(friend.checklist.filter{$0.status == Status.completed}.count)
+        let watching: String = String(friend.checklist.filter{$0.status == Status.watching}.count)
+        let wantWatch: String = String(friend.checklist.filter{$0.status == Status.wantToWatch}.count)
+        watchedLabel.text = watched
+        watchingLabel.text = watching
+        wantwatchLabel.text = wantWatch
+        avaImageLabel.image = friend.image
+        nicknameLabel.text = friend.name
         var genre = "всё"
-        switch friends.favoriteGenre {
+        switch friend.favoriteGenre {
         case Genre.action:
             genre = "экшн"
         case Genre.comedy:
@@ -49,7 +46,7 @@ class FriendPageViewController: UIViewController {
         case Genre.thriller:
             genre = "триллеры"
         }
-        favGenre.text = genre
+        favGenreLabel.text = genre
         recomendsTableView.dataSource = self
         recomendsTableView.delegate = self
     }
@@ -58,18 +55,14 @@ class FriendPageViewController: UIViewController {
 
 extension FriendPageViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let filteredData = data.actions[data.presentUser]?.filter{$0.actionType == ActionType.sharing}
-        return filteredData!.count
+        guard let filteredData = data.actions[data.presentUser]?.filter({$0.actionType == ActionType.sharing}) else { return 0 }
+        return filteredData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let filteredData = data.actions[data.presentUser]?.filter{$0.actionType == ActionType.sharing}
-        
         guard let cell = recomendsTableView.dequeueReusableCell(withIdentifier: "FilmRecsTableViewCell", for: indexPath) as? FilmRecsTableViewCell else { return UITableViewCell() }
-        
         guard let film = filteredData?[indexPath.row].film else { return UITableViewCell()}
-        
         cell.setData(recsFilm: film)
         return cell
     }
