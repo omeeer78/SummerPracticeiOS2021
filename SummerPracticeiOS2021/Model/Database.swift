@@ -113,7 +113,6 @@ class Database {
         users[currentUserIndex].checklist[index] = newChecklistModel1
         
         presentUser = users[currentUserIndex]
-        
     }
     
     func actionHappened(friend: User, film: Film, type:ActionType) {

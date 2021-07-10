@@ -19,18 +19,15 @@ class ViewController: UIViewController {
     
     @IBAction func signInAction(_ sender: Any) {
         
-        
         guard let nickname = nicknameTextField.text,
               let password = passwordTextField.text
         else { return }
         
-        let user = data.users.first{$0.name == nickname}
+        guard let user = data.users.first(where: { $0.name == nickname })
+        else { return }
         
-//        data.users.flatMap{Dictionary(grouping: $0.name, by: $0.password)}
-        
-        if user != nil && user?.password == password{
+        if user.password == password {
             
-            guard let user = user else { return }
             data.presentUser = user
             
             guard let tableViewController = storyboard?.instantiateViewController(withIdentifier: "TabBarController") as? TabBarController else { return }
@@ -38,5 +35,4 @@ class ViewController: UIViewController {
             navigationController?.pushViewController(tableViewController, animated: true)
         }
     }
-    
 }
