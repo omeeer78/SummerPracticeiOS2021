@@ -183,7 +183,7 @@
                                     <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.296661377" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="goToWatchListButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="hfb-VA-jaK"/>
+                                    <action selector="goToWatchListButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="hfb-VA-jaK"/>
                                 </connections>
                             </button>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="УЖЕ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nw4-m3-TXX">

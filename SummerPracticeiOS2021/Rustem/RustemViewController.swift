@@ -66,7 +66,9 @@ class RustemViewController: UIViewController {
     
     @IBAction func goToWatchListButton(_ sender: UIButton) {
         let watchlist = UIStoryboard(name: "Andrey", bundle: nil)
-        guard let watchlistVC = watchlist.instantiateViewController(identifier: "ChecklistViewController") as? ChecklistViewController else { return }
+        guard let watchlistVC = watchlist.instantiateViewController(withIdentifier: "ChecklistViewController") as? ChecklistViewController else { return }
+        delegate = watchlistVC
+        delegate?.openPage(page: 0)
         navigationController?.pushViewController(watchlistVC, animated: true)
     }
     
@@ -80,7 +82,7 @@ class RustemViewController: UIViewController {
     
     @IBAction func goToAlreadyWatchedButton(_ sender: UIButton) {
         let alreadyWatched = UIStoryboard(name: "Andrey", bundle: nil)
-        guard let alreadyWatchedVC = alreadyWatched.instantiateViewController(identifier: "ChecklistViewController") as? ChecklistViewController else { return }
+        guard let alreadyWatchedVC = alreadyWatched.instantiateViewController(withIdentifier: "ChecklistViewController") as? ChecklistViewController else { return }
         delegate = alreadyWatchedVC
         delegate?.openPage(page: 2)
         navigationController?.pushViewController(alreadyWatchedVC, animated: true)
