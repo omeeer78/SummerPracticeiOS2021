@@ -10,8 +10,8 @@ class Database {
     
     init() {
         presentUser = users[0]
-        addFriends()
         addChecklist()
+        addFriends()
         addActions()
     }
     
@@ -68,6 +68,7 @@ class Database {
     
     func addFriends() {
         users[0].friends = [users[1], users[2], users[3], users[4], users[5], users[6], users[7], users[8], users[9]]
+        users[2].friends = [users[1], users[0], users[3], users[4], users[6], users[7], users[8], users[9]]
     }
     
     
@@ -83,6 +84,17 @@ class Database {
                               ChecklistCellModel(film: films[7], addingDate: Date(), status: Status.wantToWatch),
                               ChecklistCellModel(film: films[17], addingDate: Date(), status: Status.wantToWatch)]
         
+        users[2].checklist = [ChecklistCellModel(film: films[3], addingDate: Date(), status: Status.wantToWatch),
+                              ChecklistCellModel(film: films[1], addingDate: Date(), status: Status.completed),
+                              ChecklistCellModel(film: films[14], addingDate: Date(), status: Status.watching),
+                              ChecklistCellModel(film: films[3], addingDate: Date(), status: Status.completed),
+                              ChecklistCellModel(film: films[4], addingDate: Date(), status: Status.watching),
+                              ChecklistCellModel(film: films[11], addingDate: Date(), status: Status.completed),
+                              ChecklistCellModel(film: films[10], addingDate: Date(), status: Status.completed),
+                              ChecklistCellModel(film: films[13], addingDate: Date(), status: Status.watching),
+                              ChecklistCellModel(film: films[2], addingDate: Date(), status: Status.wantToWatch),
+                              ChecklistCellModel(film: films[16], addingDate: Date(), status: Status.wantToWatch)]
+        
     }
     
     func addActions() {
@@ -91,28 +103,21 @@ class Database {
                              (Action(friend: users[3], film: films[6], actionType: ActionType.sharing)),
                              (Action(friend: users[4], film: films[9], actionType: ActionType.sharing))]
         
-        actions[users[2]] = [(Action(friend: users[2], film: films[4], actionType: ActionType.sharing))]
+        actions[users[2]] = [(Action(friend: users[2], film: films[4], actionType: ActionType.sharing)),
+                             (Action(friend: users[0], film: films[12], actionType: ActionType.sharing)),
+                             (Action(friend: users[0], film: films[12], actionType: ActionType.haveWatched)),
+                             (Action(friend: users[6], film: films[7], actionType: ActionType.sharing))]
     }
     
     func updateFilmCheckListStatus(film: Film, newStatus:Status){
         
-        guard let currentUserIndex = users.firstIndex(where: { $0 == presentUser }) else { return }
-        
-        guard let index = users[currentUserIndex].checklist.firstIndex(where: { $0.film.title == film.title }) else {
-            
+        guard let index = presentUser.checklist.firstIndex(where: { $0.film.title == film.title }) else {
             let newChecklistModel = ChecklistCellModel(film: film, addingDate: Date(), status: newStatus)
-            if users[currentUserIndex].checklist.count > 0{
-                users[currentUserIndex].checklist.append(newChecklistModel)
-                
-            }else{
-                users[currentUserIndex].checklist = [newChecklistModel]
-            }
+            presentUser.checklist.append(newChecklistModel)
             return }
+        let newChecklistModel = ChecklistCellModel(film: film, addingDate:  presentUser.checklist[index].addingDate, status: newStatus)
+        presentUser.checklist[index] = newChecklistModel
         
-        let newChecklistModel1 = ChecklistCellModel(film: film, addingDate: users[currentUserIndex].checklist[index].addingDate, status: newStatus)
-        users[currentUserIndex].checklist[index] = newChecklistModel1
-        
-        presentUser = users[currentUserIndex]
     }
     
     func actionHappened(friend: User, film: Film, type:ActionType) {

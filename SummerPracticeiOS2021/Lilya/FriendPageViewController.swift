@@ -55,12 +55,18 @@ class FriendPageViewController: UIViewController {
 
 extension FriendPageViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let filteredData = data.actions[data.presentUser]?.filter({$0.actionType == ActionType.sharing}) else { return 0 }
+        
+        guard let userIndex = data.users.firstIndex(where: {$0 == friend}) else { return 0 }
+        
+        guard let filteredData = data.actions[data.users[userIndex]]?.filter({$0.actionType == ActionType.sharing}) else { return 0 }
         return filteredData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let filteredData = data.actions[data.presentUser]?.filter{$0.actionType == ActionType.sharing}
+        
+        guard let userIndex = data.users.firstIndex(where: {$0 == friend}) else { return UITableViewCell()}
+        
+        let filteredData = data.actions[data.users[userIndex]]?.filter{$0.actionType == ActionType.sharing}
         guard let cell = recomendsTableView.dequeueReusableCell(withIdentifier: "FilmRecsTableViewCell", for: indexPath) as? FilmRecsTableViewCell else { return UITableViewCell() }
         guard let film = filteredData?[indexPath.row].film else { return UITableViewCell()}
         cell.setData(recsFilm: film)
@@ -75,7 +81,9 @@ extension FriendPageViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let filteredData = data.actions[data.presentUser]?.filter{$0.actionType == ActionType.sharing}
+        guard let userIndex = data.users.firstIndex(where: {$0 == friend}) else { return }
+        
+        let filteredData = data.actions[data.users[userIndex]]?.filter{$0.actionType == ActionType.sharing}
         tableView.deselectRow(at: indexPath, animated: true)
         let filmStoryboard = UIStoryboard(name: "Film",bundle: nil)
         guard let filmViewController = filmStoryboard.instantiateViewController(withIdentifier: "FilmViewController") as? FilmViewController else { return }

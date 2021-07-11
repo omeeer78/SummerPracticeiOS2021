@@ -17,6 +17,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        nicknameTextField.text = ""
+        passwordTextField.text = ""
+    }
+    
     @IBAction func signInAction(_ sender: Any) {
         
         guard let nickname = nicknameTextField.text,

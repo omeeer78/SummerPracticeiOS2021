@@ -9,6 +9,7 @@ class EditViewController: UIViewController, PHPickerViewControllerDelegate {
     @IBOutlet weak var resetButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var userAvatarImageView: UIImageView!
+    @IBOutlet weak var logOutBarButtonItem: UIBarButtonItem!
     var newImage: UIImage = data.presentUser.image
     var newFavoGengre: Genre = data.presentUser.favoriteGenre
     
@@ -77,8 +78,11 @@ class EditViewController: UIViewController, PHPickerViewControllerDelegate {
         navigationController?.popToRootViewController(animated: true)
     }
     
-    
-    
+    @IBAction func logOutButtonPressed(_ sender: UIBarButtonItem) {
+        
+        (tabBarController as? TabBarController)?.exit()
+        
+    }
 }
 
 extension UIViewController: UIPickerViewDataSource{

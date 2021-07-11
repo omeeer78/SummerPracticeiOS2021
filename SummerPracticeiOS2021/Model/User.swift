@@ -6,7 +6,7 @@
 //
 import UIKit
 
-struct User {
+class User {
     
     var name: String
     var image: UIImage
@@ -14,7 +14,15 @@ struct User {
     var password: String
     var friends: [User]
     var checklist: [ChecklistCellModel]
-
+    
+    init(name:String, image:UIImage, favoriteGenre:Genre, password:String, friends:[User], checklist :[ChecklistCellModel]){
+        self.name = name
+        self.image = image
+        self.favoriteGenre = favoriteGenre
+        self.password = password
+        self.friends = friends
+        self.checklist = checklist
+    }
 }
 
 extension User: Hashable {

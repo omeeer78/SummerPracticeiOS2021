@@ -25,8 +25,6 @@ class RustemViewController: UIViewController {
     @IBOutlet weak var recommendedMovieImageView: UIImageView!
     @IBOutlet weak var randomRecommendationLabel: UILabel!
     
-    
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         imageImageView.image = data.presentUser.image
@@ -60,7 +58,7 @@ class RustemViewController: UIViewController {
     
     
     @IBAction func editProfileButtonItemPressed(_ sender: UIBarButtonItem) {
-        guard let editVC = storyboard?.instantiateViewController(withIdentifier: "EditViewController") else { return }
+        guard let editVC = storyboard?.instantiateViewController(withIdentifier: "EditViewController") as? EditViewController else { return }
         navigationController?.pushViewController(editVC, animated: true)
     }
     
@@ -116,3 +114,4 @@ extension RustemViewController: FilmViewControllerDelegate{
         alreadyWatchedButton.setTitle(String(alreadyWatchedValue), for: .normal)
     }
 }
+
