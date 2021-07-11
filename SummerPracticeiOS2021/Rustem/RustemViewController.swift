@@ -25,8 +25,6 @@ class RustemViewController: UIViewController {
     @IBOutlet weak var recommendedMovieImageView: UIImageView!
     @IBOutlet weak var randomRecommendationLabel: UILabel!
     
-    
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         imageImageView.image = data.presentUser.image
@@ -59,14 +57,16 @@ class RustemViewController: UIViewController {
     }
     
     
-    @IBAction func editProfileButtonItem(_ sender: UIBarButtonItem) {
-        guard let editVC = storyboard?.instantiateViewController(withIdentifier: "EditViewController") else { return }
+    @IBAction func editProfileButtonItemPressed(_ sender: UIBarButtonItem) {
+        guard let editVC = storyboard?.instantiateViewController(withIdentifier: "EditViewController") as? EditViewController else { return }
         navigationController?.pushViewController(editVC, animated: true)
     }
     
     @IBAction func goToWatchListButton(_ sender: UIButton) {
         let watchlist = UIStoryboard(name: "Andrey", bundle: nil)
-        guard let watchlistVC = watchlist.instantiateViewController(identifier: "ChecklistViewController") as? ChecklistViewController else { return }
+        guard let watchlistVC = watchlist.instantiateViewController(withIdentifier: "ChecklistViewController") as? ChecklistViewController else { return }
+        delegate = watchlistVC
+        delegate?.openPage(page: 0)
         navigationController?.pushViewController(watchlistVC, animated: true)
     }
     
@@ -80,7 +80,7 @@ class RustemViewController: UIViewController {
     
     @IBAction func goToAlreadyWatchedButton(_ sender: UIButton) {
         let alreadyWatched = UIStoryboard(name: "Andrey", bundle: nil)
-        guard let alreadyWatchedVC = alreadyWatched.instantiateViewController(identifier: "ChecklistViewController") as? ChecklistViewController else { return }
+        guard let alreadyWatchedVC = alreadyWatched.instantiateViewController(withIdentifier: "ChecklistViewController") as? ChecklistViewController else { return }
         delegate = alreadyWatchedVC
         delegate?.openPage(page: 2)
         navigationController?.pushViewController(alreadyWatchedVC, animated: true)
@@ -104,7 +104,7 @@ class RustemViewController: UIViewController {
     
 }
 
-extension RustemViewController:FilmViewControllerDelegate{
+extension RustemViewController: FilmViewControllerDelegate{
     func reloadTable(page: Int) {
         let wantToWatchValue = data.presentUser.checklist.filter{$0.status == Status.wantToWatch}.count
         let nowWatchingValue = data.presentUser.checklist.filter{$0.status == Status.watching}.count
@@ -114,3 +114,4 @@ extension RustemViewController:FilmViewControllerDelegate{
         alreadyWatchedButton.setTitle(String(alreadyWatchedValue), for: .normal)
     }
 }
+

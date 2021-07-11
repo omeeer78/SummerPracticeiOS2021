@@ -262,7 +262,7 @@
                     <navigationItem key="navigationItem" title="Профиль" id="jgF-hl-AC2">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="square.and.pencil" catalog="system" id="1kh-Lq-4Sw">
                             <connections>
-                                <action selector="editProfileButtonItem:" destination="Y6W-OH-hqX" id="1vj-Nf-tui"/>
+                                <action selector="editProfileButtonItemPressed:" destination="Y6W-OH-hqX" id="1vj-Nf-tui"/>
                                 <segue destination="Bhv-wj-t0Y" kind="show" id="QRD-MZ-H6R"/>
                             </connections>
                         </barButtonItem>
@@ -370,9 +370,17 @@
                             <constraint firstItem="Swh-oZ-8hS" firstAttribute="leading" secondItem="Mbe-rb-K35" secondAttribute="leading" constant="147" id="bX3-Y6-rh9"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Изменить" id="uib-u1-qMt"/>
+                    <navigationItem key="navigationItem" title="Изменить" id="uib-u1-qMt">
+                        <barButtonItem key="rightBarButtonItem" title="Выйти" id="TKd-h4-YWS">
+                            <color key="tintColor" systemColor="systemRedColor"/>
+                            <connections>
+                                <action selector="logOutButtonPressed:" destination="Bhv-wj-t0Y" id="3Bc-VD-deE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="genrePickerView" destination="gyG-ca-A11" id="Qg8-dB-Z95"/>
+                        <outlet property="logOutBarButtonItem" destination="TKd-h4-YWS" id="zX8-Xg-Ct4"/>
                         <outlet property="nicknameTextField" destination="ios-Ov-OGp" id="J6Y-GR-3Kl"/>
                         <outlet property="resetButton" destination="f8J-K6-6du" id="lSb-w0-eu8"/>
                         <outlet property="saveButton" destination="9xD-Id-CNi" id="Kp9-hl-wrm"/>
@@ -405,7 +413,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TI4-5T-ReI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+            <point key="canvasLocation" x="177" y="140"/>
         </scene>
     </scenes>
     <resources>
