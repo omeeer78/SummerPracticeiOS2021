@@ -25,6 +25,7 @@
 		7CCC8C752694795900ACCA59 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCC8C742694795900ACCA59 /* Film.swift */; };
 		7CCC8C7B2698527700ACCA59 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCC8C7A2698527700ACCA59 /* Action.swift */; };
 		7CCC8C7D2698706600ACCA59 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CCC8C7C2698706600ACCA59 /* Images.xcassets */; };
+		7CCC8C7F26989A8700ACCA59 /* LofInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCC8C7E26989A8700ACCA59 /* LofInController.swift */; };
 		D10F00132690D729004999B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10F00122690D729004999B5 /* AppDelegate.swift */; };
 		D10F00152690D729004999B5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10F00142690D729004999B5 /* SceneDelegate.swift */; };
 		D10F00172690D729004999B5 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10F00162690D729004999B5 /* TabBarController.swift */; };
@@ -60,6 +61,7 @@
 		7CCC8C742694795900ACCA59 /* Film.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
 		7CCC8C7A2698527700ACCA59 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		7CCC8C7C2698706600ACCA59 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = SummerPracticeiOS2021/Images.xcassets; sourceTree = SOURCE_ROOT; };
+		7CCC8C7E26989A8700ACCA59 /* LofInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LofInController.swift; sourceTree = "<group>"; };
 		D10F000F2690D729004999B5 /* SummerPracticeiOS2021.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SummerPracticeiOS2021.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D10F00122690D729004999B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D10F00142690D729004999B5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 			children = (
 				D10F00162690D729004999B5 /* TabBarController.swift */,
 				D10F00182690D729004999B5 /* Main.storyboard */,
+				7CCC8C7E26989A8700ACCA59 /* LofInController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				D10F00132690D729004999B5 /* AppDelegate.swift in Sources */,
 				23CBC6242693503A003DACDF /* Database.swift in Sources */,
 				D10F00402690DC92004999B5 /* AlsuViewController.swift in Sources */,
+				7CCC8C7F26989A8700ACCA59 /* LofInController.swift in Sources */,
 				D10F003A2690DC86004999B5 /* RustemViewController.swift in Sources */,
 				141EF8B42695F5E200EDE442 /* FillmTableViewCell.swift in Sources */,
 				D10F00422690DC97004999B5 /* LilyaViewController.swift in Sources */,

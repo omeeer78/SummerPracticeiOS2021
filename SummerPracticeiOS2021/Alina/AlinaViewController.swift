@@ -11,15 +11,12 @@ class AlinaViewController: UIViewController {
     
     @IBOutlet weak var newsUITableView: UITableView!
     
-    var actions: [Action] = data.actions[data.presentUser] ?? [(Action(friend: data.users[1], film: data.films[1], actionType: ActionType.haveWatched)),
-                                                                    (Action(friend: data.users[2], film: data.films[3], actionType: ActionType.sharing)),
-                                                                    (Action(friend: data.users[3], film: data.films[7], actionType: ActionType.sharing)),
-                                                                    (Action(friend: data.users[4], film: data.films[0], actionType: ActionType.sharing))]
+    var actions: [Action] = data.actions[data.presentUser] ?? []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        self.title = "Лента"
         newsUITableView.dataSource = self
         newsUITableView.delegate = self
     }

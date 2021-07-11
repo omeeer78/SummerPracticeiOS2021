@@ -67,44 +67,61 @@ class Database {
                          Film(title: "007: Не время умирать", director: "Кэри Дзёдзи Фуканага", annotation: "Бонд попадает в ловушку к таинственному злодею, вооруженному опасным технологическим оружием.", image: UIImage(named: "no time") ?? UIImage(), rating: 7.5, genre: Genre.action)]
     
     func addFriends() {
-        presentUser.friends = [users[1], users[2], users[3], users[4], users[5], users[6], users[7], users[8], users[9]]
+        users[0].friends = [users[1], users[2], users[3], users[4], users[5], users[6], users[7], users[8], users[9]]
     }
     
     
     func addChecklist(){
-        presentUser.checklist = [ChecklistCellModel(film: films[0], addingDate: Date(), status: Status.wantToWatch),
-                                 ChecklistCellModel(film: films[9], addingDate: Date(), status: Status.completed),
-                                 ChecklistCellModel(film: films[2], addingDate: Date(), status: Status.watching),
-                                 ChecklistCellModel(film: films[3], addingDate: Date(), status: Status.completed),
-                                 ChecklistCellModel(film: films[4], addingDate: Date(), status: Status.watching),
-                                 ChecklistCellModel(film: films[5], addingDate: Date(), status: Status.completed),
-                                 ChecklistCellModel(film: films[6], addingDate: Date(), status: Status.completed),
-                                 ChecklistCellModel(film: films[8], addingDate: Date(), status: Status.watching),
-                                 ChecklistCellModel(film: films[7], addingDate: Date(), status: Status.wantToWatch),
-                                 ChecklistCellModel(film: films[17], addingDate: Date(), status: Status.wantToWatch)]
+        users[0].checklist = [ChecklistCellModel(film: films[0], addingDate: Date(), status: Status.wantToWatch),
+                              ChecklistCellModel(film: films[9], addingDate: Date(), status: Status.completed),
+                              ChecklistCellModel(film: films[2], addingDate: Date(), status: Status.watching),
+                              ChecklistCellModel(film: films[3], addingDate: Date(), status: Status.completed),
+                              ChecklistCellModel(film: films[4], addingDate: Date(), status: Status.watching),
+                              ChecklistCellModel(film: films[5], addingDate: Date(), status: Status.completed),
+                              ChecklistCellModel(film: films[6], addingDate: Date(), status: Status.completed),
+                              ChecklistCellModel(film: films[8], addingDate: Date(), status: Status.watching),
+                              ChecklistCellModel(film: films[7], addingDate: Date(), status: Status.wantToWatch),
+                              ChecklistCellModel(film: films[17], addingDate: Date(), status: Status.wantToWatch)]
         
     }
     
     func addActions() {
-        actions[presentUser] = [(Action(friend: users[1], film: films[2], actionType: ActionType.haveWatched)),
-                                (Action(friend: users[2], film: films[4], actionType: ActionType.sharing)),
-                                (Action(friend: users[3], film: films[6], actionType: ActionType.sharing)),
-                                (Action(friend: users[4], film: films[9], actionType: ActionType.sharing))]
+        actions[users[0]] = [(Action(friend: users[1], film: films[2], actionType: ActionType.haveWatched)),
+                             (Action(friend: users[2], film: films[4], actionType: ActionType.sharing)),
+                             (Action(friend: users[3], film: films[6], actionType: ActionType.sharing)),
+                             (Action(friend: users[4], film: films[9], actionType: ActionType.sharing))]
+        
+        actions[users[2]] = [(Action(friend: users[2], film: films[4], actionType: ActionType.sharing))]
     }
     
     func updateFilmCheckListStatus(film: Film, newStatus:Status){
         
-        guard let index = presentUser.checklist.firstIndex(where: { $0.film.title == film.title }) else {
+        guard let currentUserIndex = users.firstIndex(where: { $0 == presentUser }) else { return }
+        
+        guard let index = users[currentUserIndex].checklist.firstIndex(where: { $0.film.title == film.title }) else {
             
             let newChecklistModel = ChecklistCellModel(film: film, addingDate: Date(), status: newStatus)
-            presentUser.checklist.append(newChecklistModel)
+            if users[currentUserIndex].checklist.count > 0{
+                users[currentUserIndex].checklist.append(newChecklistModel)
+                
+            }else{
+                users[currentUserIndex].checklist = [newChecklistModel]
+            }
             return }
-        let newChecklistModel = ChecklistCellModel(film: film, addingDate: presentUser.checklist[index].addingDate, status: newStatus)
-        presentUser.checklist[index] = newChecklistModel
+        
+        let newChecklistModel1 = ChecklistCellModel(film: film, addingDate: users[currentUserIndex].checklist[index].addingDate, status: newStatus)
+        users[currentUserIndex].checklist[index] = newChecklistModel1
+        
+        presentUser = users[currentUserIndex]
     }
     
     func actionHappened(friend: User, film: Film, type:ActionType) {
-        actions[friend]?.append(Action(friend: presentUser, film: film, actionType: type))
+        if actions.keys.contains(friend) {
+            actions[friend]?.append(Action(friend: presentUser, film: film, actionType: type))
+        }
+        else {
+            actions[friend] = [Action(friend: presentUser, film: film, actionType: type)]
+        }
     }
     
 }
