@@ -183,7 +183,7 @@
                                     <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.296661377" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="goToWatchListButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="hfb-VA-jaK"/>
+                                    <action selector="goToWatchListButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="hfb-VA-jaK"/>
                                 </connections>
                             </button>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="УЖЕ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nw4-m3-TXX">
@@ -262,7 +262,7 @@
                     <navigationItem key="navigationItem" title="Профиль" id="jgF-hl-AC2">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="square.and.pencil" catalog="system" id="1kh-Lq-4Sw">
                             <connections>
-                                <action selector="editProfileButtonItem:" destination="Y6W-OH-hqX" id="1vj-Nf-tui"/>
+                                <action selector="editProfileButtonItemPressed:" destination="Y6W-OH-hqX" id="1vj-Nf-tui"/>
                                 <segue destination="Bhv-wj-t0Y" kind="show" id="QRD-MZ-H6R"/>
                             </connections>
                         </barButtonItem>

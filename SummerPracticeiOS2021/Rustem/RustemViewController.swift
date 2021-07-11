@@ -59,7 +59,7 @@ class RustemViewController: UIViewController {
     }
     
     
-    @IBAction func editProfileButtonItem(_ sender: UIBarButtonItem) {
+    @IBAction func editProfileButtonItemPressed(_ sender: UIBarButtonItem) {
         guard let editVC = storyboard?.instantiateViewController(withIdentifier: "EditViewController") else { return }
         navigationController?.pushViewController(editVC, animated: true)
     }
@@ -104,7 +104,7 @@ class RustemViewController: UIViewController {
     
 }
 
-extension RustemViewController:FilmViewControllerDelegate{
+extension RustemViewController: FilmViewControllerDelegate{
     func reloadTable(page: Int) {
         let wantToWatchValue = data.presentUser.checklist.filter{$0.status == Status.wantToWatch}.count
         let nowWatchingValue = data.presentUser.checklist.filter{$0.status == Status.watching}.count

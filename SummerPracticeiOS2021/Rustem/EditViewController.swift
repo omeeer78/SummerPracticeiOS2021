@@ -77,7 +77,7 @@ class EditViewController: UIViewController, PHPickerViewControllerDelegate {
         navigationController?.popToRootViewController(animated: true)
     }
     
-   
+    
     
 }
 
